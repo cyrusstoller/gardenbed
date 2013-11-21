@@ -1,0 +1,18 @@
+FORGE
+  remote: http://forge.puppetlabs.com
+  specs:
+    attachmentgenie/ssh (1.2.1)
+      puppetlabs/stdlib (>= 2.2.1)
+    puppetlabs/firewall (0.4.2)
+    puppetlabs/stdlib (4.1.0)
+
+PATH
+  remote: ./private_modules/base
+  specs:
+    base (0.0.1)
+
+DEPENDENCIES
+  attachmentgenie/ssh (~> 1.2.1)
+  base (>= 0)
+  puppetlabs/firewall (~> 0.4.2)
+
