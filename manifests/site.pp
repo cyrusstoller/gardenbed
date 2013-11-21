@@ -1,5 +1,5 @@
 class { 'base':
-  deployer_public_ssh_key => hiera("deployer_public_ssh_key"),
+  user_configs => hiera("user_configs"),
 }
 
 class { 'base_db':

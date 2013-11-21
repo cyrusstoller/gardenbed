@@ -15,6 +15,10 @@ class base_db::postgresql (
   }
   class { '::postgresql::lib::devel': }
 
-  create_resources("::postgresql::server::role", $postgres_roles)
-  create_resources("::postgresql::server::database", $postgres_databases)
+  class { 'base_db::postgresql::roles':
+    postgres_roles => $postgres_roles
+  }->
+  class { 'base_db::postgresql::databases':
+    postgres_databases => $postgres_databases
+  }
 }

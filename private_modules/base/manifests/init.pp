@@ -1,7 +1,6 @@
 class base (
+  $user_configs,
   $ssh_port = 22,
-  $deployer_username = 'deployer',
-  $deployer_public_ssh_key = ""
 ) {
   include base::firewall
   
@@ -14,8 +13,8 @@ class base (
   }
   
   class { 'base::deployer':
-    deployer_username       => $deployer_username,
-    deployer_public_ssh_key => $deployer_public_ssh_key,
+    deployer_users => $user_configs["users"],
+    ssh_keys       => $user_configs["ssh_keys"],
   }
   
   # from http://forge.puppetlabs.com/puppetlabs/apt
