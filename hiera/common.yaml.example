@@ -1,4 +1,14 @@
 deployer_public_ssh_key: "AAAAB3NzaC1yc2EAAAABIwAAAQEA9Y9X+SMTIass3X2CmxnZ92d2IwhgFow86JBXju52pxOOXgEJadoK42A8luhvazKgaNkoThmeu/NzEwFYM51lDxXYzh/sUsZjLsFmoJiTuZORlKXZUu8K4k1IFSnR81B69js5gRPvTHTWm4JFzt6XG2fMFi/Q2BPvrMAuBcOE1Dz1ypXf2W5Qraa4fyl4Ayd+rBRX2o1tOSpO9AhBjTKCx0Y43/rml6WMgfSc1dd9+TtZgWzs/dpln75UgLhWrqCulG49fDvrnQGBmreNpVLQejJmsNjWxGbDLrevXUyeSKie3sZmzJdU1uh8/40ij/tRULSY6bhfTw+atcYaOU3dOw=="
 postgresql:
-  - database_name: "revtilt_production"
-    database_password: "12345"
+  roles:
+    deployer:
+      login:       true
+      createdb:    true
+      replication: true
+      # password:    "your password goes here"
+      # md5 of password + username: md5b6f340866318388af82af1594268340c
+      # what would be calculated with postgresql_password
+      password_hash: "md5b6f340866318388af82af1594268340c"
+  databases:
+    revtilt_production:
+      owner: "deployer"

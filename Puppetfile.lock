@@ -3,7 +3,15 @@ FORGE
   specs:
     attachmentgenie/ssh (1.2.1)
       puppetlabs/stdlib (>= 2.2.1)
+    puppetlabs/apt (1.4.0)
+      puppetlabs/stdlib (>= 2.2.1)
+    puppetlabs/concat (1.0.0-rc1)
     puppetlabs/firewall (0.4.2)
+    puppetlabs/postgresql (3.2.0)
+      puppetlabs/apt (< 2.0.0, >= 1.1.0)
+      puppetlabs/concat (< 2.0.0, >= 1.0.0)
+      puppetlabs/firewall (>= 0.0.4)
+      puppetlabs/stdlib (< 5.0.0, >= 3.2.0)
     puppetlabs/stdlib (4.1.0)
 
 PATH
@@ -11,8 +19,15 @@ PATH
   specs:
     base (0.0.1)
 
+PATH
+  remote: ./private_modules/base_db
+  specs:
+    base_db (0.0.1)
+
 DEPENDENCIES
   attachmentgenie/ssh (~> 1.2.1)
   base (>= 0)
+  base_db (>= 0)
   puppetlabs/firewall (~> 0.4.2)
+  puppetlabs/postgresql (~> 3.2.0)
 
