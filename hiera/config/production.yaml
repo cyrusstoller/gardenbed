@@ -1,0 +1,7 @@
+---
+:backends:
+  - yaml
+:yaml:
+  :datadir: /tmp/puppet/hiera
+:hierarchy:
+  - common

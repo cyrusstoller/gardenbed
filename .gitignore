@@ -1,0 +1,13 @@
+.DS_STORE
+*~
+*.swp
+.vagrant
+.tmp/
+
+passwords
+
+hiera/*.yml
+hiera/*.yaml
+hiera/*.json
+
+modules/
