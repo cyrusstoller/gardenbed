@@ -16,11 +16,13 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # doesn't already exist on the user's system.
   config.vm.box_url = "http://files.vagrantup.com/precise64.box"
   
-  ########################################################
-  # # UNCOMMENT THIS TO UPGRADE YOUR BOX TO PUPPET v3.3.1+
-  ########################################################
-  # config.vm.provision :shell, :path => "scripts/upgrade_debian_based_puppet.sh.sh"
-  ########################################################
+  ####################################################################
+  # # Comment this out once you've upgraded your box to Puppet v3.3.1+
+  # # to increase the speed of privisioning your virtual machine
+  ####################################################################
+  config.vm.provision :shell, :path => "scripts/upgrade_debian_based_puppet.sh"
+
+  ####################################################################
 
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine. In the example below,
