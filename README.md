@@ -1,4 +1,4 @@
-# Basic Puppet Template for a basic Ruby + PostgreSQL + nginx stack
+# Basic Puppet Template for a basic Ruby + PostgreSQL + Nginx stack
 
 These puppet manifests are intended to be a starting point for using [Ruby](https://www.ruby-lang.org/),
 with [PostgreSQL](http://www.postgresql.org/) and [Nginx](http://nginx.com/).
@@ -71,12 +71,12 @@ If you've never used Vagrant before go check out: http://docs.vagrantup.com/v2/
 Here's an old [Railscasts episode](http://railscasts.com/episodes/292-virtual-machines-with-vagrant) that explains many
 of the steps that this project is helping you bypass.
 
-### Getting started
+## Getting started
 
 - Install [Vagrant](http://www.vagrantup.com/) using the [installer](http://downloads.vagrantup.com/). Previously you
 could install it as a rubygem, but that behavior has since been deprecated. Go to the website. 
 This was built with [version 1.3.5](http://downloads.vagrantup.com/tags/v1.3.5).
-- Clone this repository with `git clone git@github.com:cyrusstoller/ventriloquist.git`
+- Clone this repository with `git clone git@github.com:cyrusstoller/gardenbed.git`
 - `cd` into the cloned repository
 - Copy `hiera/common.yaml.example` to `hiera/common.yaml` and update the settings to configure the databases/users/rubies you want.
 See [above](#configuration) for more instructions about what to put in this file.
@@ -87,3 +87,26 @@ See [above](#configuration) for more instructions about what to put in this file
 ### Other operating systems
 
 If you are interested in using a non-debian-based box, I suggest checking out: http://www.vagrantbox.es/
+
+## Making Changes
+
+If you want to make modifications to the modules, be sure to do so in the `private_modules` directory.
+The `modules` directory that is used during `puppet apply` is overwritten each time you run
+`librarian-puppet update`. Speaking of which, to use a change you make in the `private_modules` directory you
+need to run `librarian-puppet update` before you run `vagrant provision`.
+
+## Contributing
+
+### Bugs / Issues
+
+If you find a bug or something that could improve the user experience, please file an issue on this github project.
+
+Even if you plan on filing a patch for the issue yourself it'd be great if you could still file an issue so that we
+don't have people duplicating work unnecessarily.
+
+### Submitting Pull Requests
+
+1. Fork this project
+2. Make a feature branch `git checkout -b feature`
+3. Make your changes and commit them to your feature branch
+4. Submit a pull request
