@@ -1,7 +1,8 @@
+# This class sets up the necessary libraries for the postgresql installation
 class base_db::postgresql (
-  $postgres_roles,
-  $postgres_databases,
-  $postgres_version = "9.3"
+  $postgres_roles     = {},
+  $postgres_databases = {},
+  $postgres_version   = '9.3',
 ) {
   class { 'postgresql::globals':
     manage_package_repo => true,
@@ -10,7 +11,7 @@ class base_db::postgresql (
     locale              => 'en_US.UTF-8'
   }
   ->
-  class { '::postgresql::server': 
+  class { '::postgresql::server':
     version => $postgres_version,
   }
   class { '::postgresql::lib::devel': }
