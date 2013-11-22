@@ -3,9 +3,13 @@ postgresql_roles:
     login:         true
     createdb:      true
     replication:   true
-    # password:      "xyz password"
-    # md5 of password + username: md5b6f340866318388af82af1594268340c
-    password_hash: "md5b6f340866318388af82af1594268340c"
+    # password = "foobar"
+    # md5 of password + username: md56a7cf5e42712e5a19e5ea884d8644ef8
+    # easily determined computed on the command line with:
+    # $> echo -n "md5"; echo -n "foobardeployer" | md5
+    # Or more generally:
+    # $> echo -n "md5"; echo -n "#{password}#{username} | md5"
+    password_hash: "md56a7cf5e42712e5a19e5ea884d8644ef8"
 postgresql_databases:
   revtilt_production:
     owner: "deployer"
@@ -28,4 +32,4 @@ ssh_keys:
     user: deployer
     type: ssh-rsa
     ensure: present
-    key: "AAAAB3NzaC1yc2EAAAABIwAAAQEA9Y9X+SMTIass3X2CmxnZ92d2...."
+    key: "AAAAB3NzaC1yc2EAAAABIwAAAQEA9Y9X+SMTIass3X2CmxnZ92d2IwhgFow86JBXju52pxOOXgEJadoK42A8luhvazKgaNkoThmeu/NzEwFYM51lDxXYzh/sUsZjLsFmoJiTuZORlKXZUu8K4k1IFSnR81B69js5gRPvTHTWm4JFzt6XG2fMFi/Q2BPvrMAuBcOE1Dz1ypXf2W5Qraa4fyl4Ayd+rBRX2o1tOSpO9AhBjTKCx0Y43/rml6WMgfSc1dd9+TtZgWzs/dpln75UgLhWrqCulG49fDvrnQGBmreNpVLQejJmsNjWxGbDLrevXUyeSKie3sZmzJdU1uh8/40ij/tRULSY6bhfTw+atcYaOU3dOw=="
