@@ -17,6 +17,24 @@ arise from collaborators using different development environments.
 
 If you've ever heard someone say, "your code doesn't work on my computer," then you know what I'm talking about.
 
+## Getting started
+
+- Install [Vagrant](http://www.vagrantup.com/) using the [installer](http://downloads.vagrantup.com/). Previously you
+could install it as a rubygem, but that behavior has since been deprecated. Go to the website. 
+This was built with [version 1.3.5](http://downloads.vagrantup.com/tags/v1.3.5).
+- Clone this repository with `git clone git@github.com:cyrusstoller/gardenbed.git`
+- `cd` into the cloned repository
+- Copy `hiera/common.yaml.example` to `hiera/common.yaml` and update the settings to configure the databases/users/rubies you want.
+See [below](#configuration) for more instructions about what to put in this file.
+
+```bash
+$> cp hiera/common.yaml.example hiera/common.yaml
+```
+
+- `bundle install` to install the necessary gems
+- `librarian-puppet install` to install the necessary modules from the [Puppet Forge](http://forge.puppetlabs.com/)
+- `vagrant up` should download the appropriate box and setup the virtual machine.
+
 ## <a name="configuration"></a>Configuration
 
 - Copy `hiera/common.yaml.example` to `hiera/common.yaml`
@@ -70,19 +88,6 @@ If you've never used Vagrant before go check out: http://docs.vagrantup.com/v2/
 
 Here's an old [Railscasts episode](http://railscasts.com/episodes/292-virtual-machines-with-vagrant) that explains many
 of the steps that this project is helping you bypass.
-
-## Getting started
-
-- Install [Vagrant](http://www.vagrantup.com/) using the [installer](http://downloads.vagrantup.com/). Previously you
-could install it as a rubygem, but that behavior has since been deprecated. Go to the website. 
-This was built with [version 1.3.5](http://downloads.vagrantup.com/tags/v1.3.5).
-- Clone this repository with `git clone git@github.com:cyrusstoller/gardenbed.git`
-- `cd` into the cloned repository
-- Copy `hiera/common.yaml.example` to `hiera/common.yaml` and update the settings to configure the databases/users/rubies you want.
-See [above](#configuration) for more instructions about what to put in this file.
-- `bundle install` to install the necessary gems
-- `librarian-puppet install` to install the necessary modules from the [Puppet Forge](http://forge.puppetlabs.com/)
-- `vagrant up` should download the appropriate box and setup the virtual machine.
 
 ### Other operating systems
 
