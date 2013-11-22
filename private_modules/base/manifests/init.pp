@@ -1,5 +1,6 @@
 class base (
-  $user_configs,
+  $users,
+  $ssh_keys,
   $ssh_port = 22,
   $has_firewall = true
 ) {
@@ -18,8 +19,8 @@ class base (
   }
   
   class { 'base::deployer':
-    deployer_users => $user_configs["users"],
-    ssh_keys       => $user_configs["ssh_keys"],
+    deployer_users => $users,
+    ssh_keys       => $ssh_keys,
   }
   
   # from http://forge.puppetlabs.com/puppetlabs/apt

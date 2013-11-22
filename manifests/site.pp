@@ -1,12 +1,14 @@
 class { 'base':
-  user_configs => hiera("user_configs"),
+  users    => hiera("users"),
+  ssh_keys => hiera("ssh_keys"),
   # # Uncomment the following line if you are provisioning a Vagrant box for development
   # has_firewall => false
 }
 
 class { 'base_db':
-  postgres_details => hiera("postgresql"),
-  require => Class['base']
+  postgresql_roles     => hiera("postgresql_roles"),
+  postgresql_databases => hiera("postgresql_databases"),
+  require              => Class['base']
 }
 
 class { 'base_web':

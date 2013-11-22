@@ -1,31 +1,31 @@
-postgresql:
-  roles:
-    deployer:
-      login:         true
-      createdb:      true
-      replication:   true
-      # password:    "xyz your password"
-      # md5 of password + username: md5b6f340866318388af82af1594268340c
-      password_hash: "md5b6f340866318388af82af1594268340c"
-  databases:
-    revtilt_production:
-      owner: "deployer"
-rubies:
+postgresql_roles:
+  deployer:
+    login:         true
+    createdb:      true
+    replication:   true
+    # password:      "xyz password"
+    # md5 of password + username: md5b6f340866318388af82af1594268340c
+    password_hash: "md5b6f340866318388af82af1594268340c"
+postgresql_databases:
+  revtilt_production:
+    owner: "deployer"
+    
+rubies: 
+  # - 1.9.3-p448
   - 2.0.0-p247
-user_configs:
-  users:
-    deployer:
-      comment:    Deployer User
-      managehome: true
-      # figured out by setting the password with passwd and then checking /etc/shadow
-      password:   NP
-      ensure:     present
-      shell:      /bin/bash
-      groups:     ["deployers", "admin"]
-  ssh_keys:
-    deployer_key:
-      user: deployer
-      type: ssh-rsa
-      ensure: present
-      key: "AAAAB3NzaC1yc2EAAAABIwAAAQEA9Y9X+SMTIass3X2CmxnZ92d2IwhgFow86JBXju52pxOOXgEJadoK42A8luhvazKgaNkoThmeu/NzEwFYM51lDxXYzh/sUsZjLsFmoJiTuZORlKXZUu8K4k1IFSnR81B69js5gRPvTHTWm4JFzt6XG2fMFi/Q2BPvrMAuBcOE1Dz1ypXf2W5Qraa4fyl4Ayd+rBRX2o1tOSpO9AhBjTKCx0Y43/rml6WMgfSc1dd9+TtZgWzs/dpln75UgLhWrqCulG49fDvrnQGBmreNpVLQejJmsNjWxGbDLrevXUyeSKie3sZmzJdU1uh8/40ij/tRULSY6bhfTw+atcYaOU3dOw=="
-
+  
+users:
+  deployer:
+    comment:    Deployer User
+    managehome: true
+    # figured out by setting the password with passwd and then checking /etc/shadow
+    password:   NP
+    ensure:     present
+    shell:      /bin/bash
+    groups:     ["deployers", "admin"]
+ssh_keys:
+  deployer_key:
+    user: deployer
+    type: ssh-rsa
+    ensure: present
+    key: "AAAAB3NzaC1yc2EAAAABIwAAAQEA9Y9X+SMTIass3X2CmxnZ92d2...."
