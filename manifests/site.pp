@@ -4,4 +4,9 @@ class { 'base':
 
 class { 'base_db':
   postgres_details => hiera("postgresql"),
+  require => Class['base']
+}
+
+class { 'base_web':
+  require => Class['base']
 }
