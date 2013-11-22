@@ -10,3 +10,8 @@ class { 'base_db':
 class { 'base_web':
   require => Class['base']
 }
+
+class { 'base_app':
+  rubies => hiera("rubies"),
+  require => Class['base']
+}

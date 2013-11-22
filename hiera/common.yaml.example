@@ -10,6 +10,8 @@ postgresql:
   databases:
     revtilt_production:
       owner: "deployer"
+rubies:
+  - 2.0.0-p247
 user_configs:
   users:
     deployer:
