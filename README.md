@@ -19,6 +19,7 @@ If you've ever heard someone say, "your code doesn't work on my computer," then 
 
 ## Getting started
 
+- Install [Virtual Box](https://www.virtualbox.org/wiki/Downloads)
 - Install [Vagrant](http://www.vagrantup.com/) using the [installer](http://downloads.vagrantup.com/). Previously you
 could install it as a rubygem, but that behavior has since been deprecated. Go to the website. 
 This was built with [version 1.3.5](http://downloads.vagrantup.com/tags/v1.3.5).
