@@ -24,13 +24,13 @@ could install it as a rubygem, but that behavior has since been deprecated. Go t
 This was built with [version 1.3.5](http://downloads.vagrantup.com/tags/v1.3.5).
 - Clone this repository with `git clone git@github.com:cyrusstoller/gardenbed.git`
 - `cd` into the cloned repository
-- Copy `hiera/common.yaml.example` to `hiera/common.yaml` and update the settings to configure the databases/users/rubies you want.
-See [below](#configuration) for more instructions about what to put in this file.
+- Copy `hiera/common.yaml.example` to `hiera/common.yaml`
 
 ```bash
 $> cp hiera/common.yaml.example hiera/common.yaml
 ```
 
+- Go to `https://github.com/<<GITHUB_USERNAME>>.keys` and copy your SSH key into the last line of your `hiera/common.yaml`
 - `bundle install` to install the necessary gems
 - `librarian-puppet install` to install the necessary modules from the [Puppet Forge](http://forge.puppetlabs.com/)
 - `vagrant up` should download the appropriate box and setup the virtual machine.
