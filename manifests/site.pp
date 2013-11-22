@@ -1,5 +1,7 @@
 class { 'base':
   user_configs => hiera("user_configs"),
+  # # Uncomment the following line if you are provisioning a Vagrant box for development
+  # has_firewall => false
 }
 
 class { 'base_db':

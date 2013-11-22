@@ -1,11 +1,16 @@
 class base (
   $user_configs,
   $ssh_port = 22,
+  $has_firewall = true
 ) {
-  include base::firewall
-  
   package { "vim":
     ensure => installed
+  }
+  
+  if ($has_firewall) {
+    include base::firewall
+  } else {
+    notify { "Not running firewall instructions": }
   }
   
   class { 'base::ssh':
