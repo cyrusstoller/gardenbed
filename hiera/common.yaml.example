@@ -13,6 +13,8 @@ postgresql_roles:
 postgresql_databases:
   revtilt_production:
     owner: "deployer"
+  # my_database:
+  #   owner: "vagrant"
     
 rubies: 
   # - 1.9.3-p448
@@ -22,7 +24,8 @@ users:
   deployer:
     comment:    Deployer User
     managehome: true
-    # figured out by setting the password with passwd and then checking /etc/shadow
+    # figure out by setting the password with passwd and then checking /etc/shadow
+    # default is to have no password (ie one that can't be inputted)
     password:   NP
     ensure:     present
     shell:      /bin/bash
