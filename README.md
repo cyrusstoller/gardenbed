@@ -34,7 +34,10 @@ $> cp hiera/common.yaml.example hiera/common.yaml
 - Go to `https://github.com/<<GITHUB_USERNAME>>.keys` and copy your SSH key into the last line of your `hiera/common.yaml`
 - `bundle install` to install the necessary gems
 - `librarian-puppet install` to install the necessary modules from the [Puppet Forge](http://forge.puppetlabs.com/)
-- `vagrant up` should download the appropriate box and setup the virtual machine.
+- `vagrant up` should download the appropriate box and setup the virtual machine. *Warning* During this initial provisioning
+your CPU will be very busy. Close any unnecessary applications. Web browsers especially. This process will take a while.
+Don't worry about some error messages on during this initial run. Just let it keep going until you have your command prompt back.
+Go get some coffee and come back in a half hour.
 
 ## <a name="configuration"></a>Configuration
 
