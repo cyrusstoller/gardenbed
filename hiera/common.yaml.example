@@ -34,7 +34,6 @@ rubies:
 users:
   deployer:
     comment:    Deployer User
-    managehome: true
     # figure out by setting the password with passwd and then checking /etc/shadow
     # default is to have no password (ie one that can't be inputted)
     password:   NP
