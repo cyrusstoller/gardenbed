@@ -8,17 +8,28 @@ postgresql_roles:
     # easily determined computed on the command line with:
     # $> echo -n "md5"; echo -n "foobardeployer" | md5
     # Or more generally:
-    # $> echo -n "md5"; echo -n "#{password}#{username} | md5"
+    # $> echo -n "md5"; echo -n "#{password}#{username}" | md5
     password_hash: "md56a7cf5e42712e5a19e5ea884d8644ef8"
+  vagrant:
+    login:         true
+    createdb:      true
+    replication:   true
+    # password = "foobar"
+    # md5 of password + username: md55fc241754394c19de095b6554729f9a6
+    # easily determined computed on the command line with:
+    # $> echo -n "md5"; echo -n "foobardeployer" | md5
+    # Or more generally:
+    # $> echo -n "md5"; echo -n "#{password}#{username}" | md5
+    password_hash: "md55fc241754394c19de095b6554729f9a6"
 postgresql_databases:
   revtilt_production:
     owner: "deployer"
-  # my_database:
-  #   owner: "vagrant"
+  my_database:
+    owner: "vagrant"
     
 rubies: 
-  # - 1.9.3-p448
-  - 2.0.0-p247
+  # - 1.9.3-p484
+  - 2.0.0-p353
   
 users:
   deployer:
@@ -35,4 +46,5 @@ ssh_keys:
     user: deployer
     type: ssh-rsa
     ensure: present
+    # Find this ssh key in `~/.ssh/id_rsa.pub` - be sure to truncate the prefix `ssh-rsa`
     key: "AAAAB3NzaC1yc2EAAAABIwAAAQEA9Y9X+SMTIass3X2CmxnZ92d2IwhgFow86JBXju52pxOOXgEJadoK42A8luhvazKgaNkoThmeu/NzEwFYM51lDxXYzh/sUsZjLsFmoJiTuZORlKXZUu8K4k1IFSnR81B69js5gRPvTHTWm4JFzt6XG2fMFi/Q2BPvrMAuBcOE1Dz1ypXf2W5Qraa4fyl4Ayd+rBRX2o1tOSpO9AhBjTKCx0Y43/rml6WMgfSc1dd9+TtZgWzs/dpln75UgLhWrqCulG49fDvrnQGBmreNpVLQejJmsNjWxGbDLrevXUyeSKie3sZmzJdU1uh8/40ij/tRULSY6bhfTw+atcYaOU3dOw=="

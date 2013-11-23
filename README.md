@@ -17,7 +17,7 @@ arise from collaborators using different development environments.
 
 If you've ever heard someone say, "your code doesn't work on my computer," then you know what I'm talking about.
 
-## Getting started
+## Quick start guide for development
 
 - Install [Virtual Box](https://www.virtualbox.org/wiki/Downloads)
 - Install [Vagrant](http://www.vagrantup.com/) using the [installer](http://downloads.vagrantup.com/). Previously you
@@ -25,27 +25,82 @@ could install it as a rubygem, but that behavior has since been deprecated. Go t
 This was built with [version 1.3.5](http://downloads.vagrantup.com/tags/v1.3.5).
 - Clone this repository with `git clone git@github.com:cyrusstoller/gardenbed.git`
 - `cd` into the cloned repository
-- Copy `hiera/common.yaml.example` to `hiera/common.yaml`
+- Run the following command
 
 ```bash
-$> cp hiera/common.yaml.example hiera/common.yaml
+$> scripts/bootstrap.sh development
 ```
 
-- Go to `https://github.com/<<GITHUB_USERNAME>>.keys` and copy your SSH key into the last line of your `hiera/common.yaml`
-- A shortcut for the following commands is to use the included bash script
-
-```bash
-$> scripts/install.sh
-```
-
-- `bundle install` to install the necessary gems
-- `librarian-puppet install` to install the necessary modules from the [Puppet Forge](http://forge.puppetlabs.com/)
-- `vagrant up` should download the appropriate box and setup the virtual machine. *Warning* During this initial provisioning
-your CPU will be very busy. Close any unnecessary applications. Web browsers especially. This process will take a while.
+- *Warning* During this initial provisioning your CPU will be very busy. Close any unnecessary applications.
+Web browsers especially. This process will take a while.
 Don't worry about some error messages on during this initial run. Just let it keep going until you have your command prompt back.
 Go get some coffee and come back in a half hour.
+- Everything in this the `gardenbed` directory will be accessible from your virtual machine at `/vagrant`.
+In other words your files will be both on your virtual machine and on your host machine, meaning you can continue to use
+your favorite text editor and maintain a similar workflow without having to worry about system dependencies.
+- SSH into your machine with:
 
-## <a name="configuration"></a>Configuration
+```bash
+$> vagrant ssh
+```
+
+- Then go to your project directory in `/vagrant` and `bundle install` and `bundle exec rails s` or `bundle exec foreman start` 
+and you should be good to go.
+- Your website should be viewable at `http://localhost:3000` or `http://localhost:5000` depending on how your application is configured.
+
+### What's been configured
+- [rbenv](https://github.com/sstephenson/rbenv) with ruby v2.0.0-p353 installed
+- [postgresql](http://www.postgresql.org/) version 9.3.1+ with role/username `vagrant` with password `foobar` and 
+encoding `UTF8` and locale `en_US.UTF-8`.
+- [nodejs](http://nodejs.org/) needed for the asset pipeline
+
+## Getting started for staging / mock-production
+
+- Install [Virtual Box](https://www.virtualbox.org/wiki/Downloads)
+- Install [Vagrant](http://www.vagrantup.com/) using the [installer](http://downloads.vagrantup.com/). Previously you
+could install it as a rubygem, but that behavior has since been deprecated. Go to the website. 
+This was built with [version 1.3.5](http://downloads.vagrantup.com/tags/v1.3.5).
+- Clone this repository with `git clone git@github.com:cyrusstoller/gardenbed.git`
+- `cd` into the cloned repository
+- `cp hiera/common.yaml.example hiera/common.yaml`
+- Go to `https://github.com/<<GITHUB_USERNAME>>.keys` and copy your SSH key into the last line of your `hiera/common.yaml`
+- Run the following command
+
+```bash
+$> scripts/bootstrap.sh staging
+```
+
+- This configures a `deployer` user that has you can SSH into using:
+
+```bash
+$> ssh deployer@192.168.33.11
+```
+
+### What's been configured
+- a firewall as recommended by https://library.linode.com/securing-your-server#sph_creating-a-firewall
+- an ssh key for the `deployer` user, which is ideal for practicing deployment with a tool like [Capistrano](http://www.capistranorb.com/)
+- after deploying to this machine you will be able to view `http://192.168.33.11` on port 80
+- [rbenv](https://github.com/sstephenson/rbenv) with ruby v2.0.0-p353 installed
+- [postgresql](http://www.postgresql.org/) version 9.3.1+ with role/username `deployer` with password `foobar` and 
+encoding `UTF8` and locale `en_US.UTF-8`.
+- [nodejs](http://nodejs.org/) needed for the asset pipeline
+- [nginx](http://nginx.com/) for serving static assets
+
+The `hiera/common.yaml` makes it really easy to provision more system users, create more roles and databases for postgresql, 
+and install more rubies. See below for more details.
+
+## Vagrant
+
+If you've never used Vagrant before, go check out: http://docs.vagrantup.com/v2/
+
+Here's an old [Railscasts episode](http://railscasts.com/episodes/292-virtual-machines-with-vagrant) that explains many
+of the steps that this project is helping you bypass.
+
+### Other operating systems
+
+If you are interested in using a non-debian-based box, I suggest checking out: http://www.vagrantbox.es/
+
+## Configuration
 
 - Copy `hiera/common.yaml.example` to `hiera/common.yaml`
 - You should see five top level keys in this `yaml` file. We'll go through what each sets up.
@@ -91,17 +146,6 @@ $> echo -n "md5"; echo "<<PASSWORD>><<USERNAME>>" | md5
   use the public ssh key you have on github by going to the following url: `https://github.com/<<GITHUB_USERNAME>>.keys`.
   - Be sure to chop off the leading `ssh-rsa ` before adding your key(s) to `hiera/common.yaml`
   - To find more options that can be passed, read [this](http://docs.puppetlabs.com/references/latest/type.html#sshauthorizedkey)
-
-## Vagrant
-
-If you've never used Vagrant before go check out: http://docs.vagrantup.com/v2/
-
-Here's an old [Railscasts episode](http://railscasts.com/episodes/292-virtual-machines-with-vagrant) that explains many
-of the steps that this project is helping you bypass.
-
-### Other operating systems
-
-If you are interested in using a non-debian-based box, I suggest checking out: http://www.vagrantbox.es/
 
 ## Making Changes
 
