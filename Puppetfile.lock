@@ -1,7 +1,6 @@
 FORGE
   remote: http://forge.puppetlabs.com
   specs:
-    alup/rbenv (1.2.0)
     attachmentgenie/ssh (1.2.1)
       puppetlabs/stdlib (>= 2.2.1)
     jfryman/nginx (0.0.6)
@@ -20,6 +19,13 @@ FORGE
       puppetlabs/firewall (>= 0.0.4)
       puppetlabs/stdlib (< 5.0.0, >= 3.2.0)
     puppetlabs/stdlib (4.1.0)
+
+GIT
+  remote: git@github.com:alup/puppet-rbenv.git
+  ref: 16bd471c3713b317fa47ed9747f4ff2cd82dd317
+  sha: 16bd471c3713b317fa47ed9747f4ff2cd82dd317
+  specs:
+    alup/rbenv (1.2.0)
 
 PATH
   remote: ./private_modules/base
@@ -42,7 +48,7 @@ PATH
     base_web (0.0.1)
 
 DEPENDENCIES
-  alup/rbenv (~> 1.2.0)
+  alup/rbenv (>= 0)
   attachmentgenie/ssh (~> 1.2.1)
   base (>= 0)
   base_app (>= 0)
