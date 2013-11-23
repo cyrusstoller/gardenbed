@@ -8,5 +8,10 @@ class base::deployer (
     ensure => present,
   }
   create_resources('user', $deployer_users)
-  create_resources('ssh_authorized_key', $ssh_keys)
+
+  $ssh_key_defaults = {
+    ensure => present,
+    type   => 'ssh-rsa',
+  }
+  create_resources('ssh_authorized_key', $ssh_keys, $ssh_key_defaults)
 }
