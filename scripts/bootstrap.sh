@@ -7,7 +7,7 @@ function invalid_usage {
   echo "You need to provide a bootstrap environment as an argument"
   echo "valid options include: 'development', 'staging'"
   echo
-  echo "usage: bootstrap.sh BOOTSTRAP_ENVIRONMENT"
+  echo "usage: $0 BOOTSTRAP_ENVIRONMENT"
   exit 1
 }
 
@@ -19,11 +19,11 @@ BASE_PATH="$DIR/.."
 case $1 in
   development)
     echo "Starting development bootstrap process ..."
-    ln -nfs "$BASE_PATH/Vagrantfile.development" "$BASE_PATH/Vagrantfile"
+    cp "$BASE_PATH/Vagrantfile.development" "$BASE_PATH/Vagrantfile"
     ;;
   staging)
     echo "Starting staging bootstrap process ..."
-    ln -nfs "$BASE_PATH/Vagrantfile.staging" "$BASE_PATH/Vagrantfile"
+    cp "$BASE_PATH/Vagrantfile.staging" "$BASE_PATH/Vagrantfile"
     ;;
   *)
     invalid_usage
