@@ -1,1 +1,0 @@
-scripts/../Vagrantfile.development

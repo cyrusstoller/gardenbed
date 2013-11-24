@@ -12,3 +12,5 @@ hiera/*.yaml
 hiera/*.json
 
 modules/
+
+Vagrantfile
