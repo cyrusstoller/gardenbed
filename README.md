@@ -169,3 +169,6 @@ don't have people duplicating work unnecessarily.
 2. Make a feature branch `git checkout -b feature`
 3. Make your changes and commit them to your feature branch
 4. Submit a pull request
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/cyrusstoller/gardenbed/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
