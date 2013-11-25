@@ -1,8 +1,7 @@
 #!/bin/bash
 
-PWD=$(pwd)
 DIR=$( dirname "${BASH_SOURCE}" )
-BASE_PATH="$PWD/$DIR/.."
+BASE_PATH="$DIR/.."
 
 # Configuration from common.yaml
 
@@ -12,7 +11,7 @@ then
 else
   echo "Creating a 'hiera/common.yaml' based on 'hiera/common.yaml.example' ..."
   cp "$BASE_PATH/hiera/common.yaml.example" "$BASE_PATH/hiera/common.yaml"
-  echo "Feed free to edit configurations after this bootstrap process"
+  echo "Feel free to edit configurations after this bootstrap process"
   echo "To enable these new configurations call 'scripts/update.sh'"
 fi
 
@@ -26,5 +25,4 @@ echo "Installing necessary puppet modules from the forge ..."
 bundle exec librarian-puppet install
 echo "Setting up vagrant. Hang tight. This may take a while ..."
 vagrant up
-cd "$PWD"
 echo "All done!"
