@@ -4,6 +4,10 @@ class base::deployer (
   $deployer_users = {},
   $ssh_keys       = {},
 ) {
+  group { 'admin':
+    ensure => present
+  }
+
   group { 'deployers':
     ensure => present,
   }
