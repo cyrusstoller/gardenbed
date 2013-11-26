@@ -13,4 +13,12 @@ class base_app (
   rbenv::compile { $rubies:
     user => $deployer,
   }
+
+  file { '/var/www':
+    ensure  => directory,
+    group   => $deployers_group,
+    owner   => 'root',
+    mode    => '0775',
+    require => Group['deployers']
+  }
 }
