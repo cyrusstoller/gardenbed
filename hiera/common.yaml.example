@@ -15,12 +15,12 @@ postgresql_roles:
     createdb:      true
     replication:   true
     # password = "foobar"
-    # md5 of password + username: md55fc241754394c19de095b6554729f9a6
+    # md5 of password + username: md54bed967bd13dba810255375f600eceb3
     # easily determined computed on the command line with:
-    # $> echo -n "md5"; echo -n "foobardeployer" | md5
+    # $> echo -n "md5"; echo -n "foobarvagrant" | md5
     # Or more generally:
     # $> echo -n "md5"; echo -n "#{password}#{username}" | md5
-    password_hash: "md55fc241754394c19de095b6554729f9a6"
+    password_hash: "md54bed967bd13dba810255375f600eceb3"
 postgresql_databases:
   revtilt_production:
     owner: "deployer"
