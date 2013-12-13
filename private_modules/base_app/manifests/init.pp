@@ -14,7 +14,7 @@ class base_app (
   rbenv::compile { $rubies:
     user => $deployer,
   }
-
+  ->
   file { "/home/${deployer}/.rbenv/version":
     ensure  => file,
     content => $default_ruby,
