@@ -3,6 +3,7 @@ class base_app (
   $rubies          = [],
   $deployer        = 'deployer',
   $deployers_group = 'deployers',
+  $default_ruby    = '',
 ){
   include nodejs
 
@@ -12,6 +13,11 @@ class base_app (
 
   rbenv::compile { $rubies:
     user => $deployer,
+  }
+
+  file { "/home/${deployer}/.rbenv/version":
+    ensure  => file,
+    content => $default_ruby,
   }
 
   file { '/var/www':
