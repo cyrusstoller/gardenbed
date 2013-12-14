@@ -17,5 +17,5 @@ class { 'base_app':
   deployer        => 'vagrant',
   deployers_group => 'vagrant',
   require         => Class['base'],
-  default_ruby    => hiera('default_ruby', ''),
+  default_ruby    => hiera('default_ruby', '2.0.0-p353'),
 }

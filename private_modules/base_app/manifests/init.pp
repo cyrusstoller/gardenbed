@@ -18,6 +18,8 @@ class base_app (
   file { "/home/${deployer}/.rbenv/version":
     ensure  => file,
     content => $default_ruby,
+    owner   => $deployer,
+    group   => $deployer,
   }
 
   file { '/var/www':
