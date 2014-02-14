@@ -2,12 +2,12 @@ forge "http://forge.puppetlabs.com"
 
 # Public Modules
 
-mod 'attachmentgenie/ssh', '~> 1.2.1'
+mod 'attachmentgenie/ssh', '~> 1.2.2'
 mod 'puppetlabs/firewall', '~> 0.4.2'
 
 mod 'puppetlabs/postgresql', '~> 3.2.0'
 
-mod 'jfryman/nginx', '~> 0.0.5'
+mod 'jfryman/nginx', '~> 0.0.7'
 
 mod 'alup/rbenv', :git => 'git@github.com:alup/puppet-rbenv.git', :ref => "16bd471c3713b317fa47ed9747f4ff2cd82dd317"
 mod 'puppetlabs/nodejs', '~> 0.4.0'
