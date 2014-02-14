@@ -15,7 +15,7 @@ FORGE
     puppetlabs/nodejs (0.4.0)
       puppetlabs/apt (>= 0.0.3)
       puppetlabs/stdlib (>= 2.0.0)
-    puppetlabs/postgresql (3.2.0)
+    puppetlabs/postgresql (3.3.0)
       puppetlabs/apt (< 2.0.0, >= 1.1.0)
       puppetlabs/concat (< 2.0.0, >= 1.0.0)
       puppetlabs/firewall (>= 0.0.4)
@@ -51,13 +51,13 @@ PATH
 
 DEPENDENCIES
   alup/rbenv (>= 0)
-  attachmentgenie/ssh (~> 1.2.1)
+  attachmentgenie/ssh (~> 1.2.2)
   base (>= 0)
   base_app (>= 0)
   base_db (>= 0)
   base_web (>= 0)
-  jfryman/nginx (~> 0.0.5)
+  jfryman/nginx (~> 0.0.7)
   puppetlabs/firewall (~> 0.4.2)
   puppetlabs/nodejs (~> 0.4.0)
-  puppetlabs/postgresql (~> 3.2.0)
+  puppetlabs/postgresql (~> 3.3.0)
 

@@ -5,7 +5,7 @@ forge "http://forge.puppetlabs.com"
 mod 'attachmentgenie/ssh', '~> 1.2.2'
 mod 'puppetlabs/firewall', '~> 0.4.2'
 
-mod 'puppetlabs/postgresql', '~> 3.2.0'
+mod 'puppetlabs/postgresql', '~> 3.3.0'
 
 mod 'jfryman/nginx', '~> 0.0.7'
 
