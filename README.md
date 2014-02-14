@@ -22,7 +22,7 @@ If you've ever heard someone say, "your code doesn't work on my computer," then 
 - Install [Virtual Box](https://www.virtualbox.org/wiki/Downloads)
 - Install [Vagrant](http://www.vagrantup.com/) using the [installer](http://www.vagrantup.com/downloads.html). Previously you
 could install it as a rubygem, but that behavior has since been deprecated. Go to the website. 
-This was built with [version 1.4.0](https://dl.bintray.com/mitchellh/vagrant/Vagrant-1.4.0.dmg).
+This was built with [version 1.4.3](https://dl.bintray.com/mitchellh/vagrant/Vagrant-1.4.3.dmg).
 - Clone this repository with `git clone git@github.com:cyrusstoller/gardenbed.git`
 - `cd` into the cloned repository
 - Run the following command
