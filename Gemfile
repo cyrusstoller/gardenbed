@@ -2,8 +2,8 @@ source 'https://rubygems.org'
  
 group :rake do
   gem 'rake'
-  gem "puppet", "~> 3.3.1"
-  gem "librarian-puppet", "~> 0.9.10"
+  gem "puppet", "~> 3.4.2"
+  gem "librarian-puppet", "~> 0.9.13"
   gem "puppet-lint", "~> 0.3.2"
 
   # for writing tests
