@@ -11,7 +11,7 @@ FORGE
       puppetlabs/stdlib (>= 2.2.1)
     puppetlabs/concat (1.1.0-rc1)
       puppetlabs/stdlib (>= 3.0.0)
-    puppetlabs/firewall (0.4.2)
+    puppetlabs/firewall (1.0.0)
     puppetlabs/nodejs (0.4.0)
       puppetlabs/apt (>= 0.0.3)
       puppetlabs/stdlib (>= 2.0.0)
@@ -57,7 +57,7 @@ DEPENDENCIES
   base_db (>= 0)
   base_web (>= 0)
   jfryman/nginx (~> 0.0.7)
-  puppetlabs/firewall (~> 0.4.2)
+  puppetlabs/firewall (~> 1.0.0)
   puppetlabs/nodejs (~> 0.4.0)
   puppetlabs/postgresql (~> 3.3.0)
 

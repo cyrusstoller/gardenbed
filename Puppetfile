@@ -3,7 +3,7 @@ forge "http://forge.puppetlabs.com"
 # Public Modules
 
 mod 'attachmentgenie/ssh', '~> 1.2.2'
-mod 'puppetlabs/firewall', '~> 0.4.2'
+mod 'puppetlabs/firewall', '~> 1.0.0'
 
 mod 'puppetlabs/postgresql', '~> 3.3.0'
 
