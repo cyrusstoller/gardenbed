@@ -4,6 +4,7 @@ forge "http://forge.puppetlabs.com"
 
 mod 'attachmentgenie/ssh', '~> 1.2.2'
 mod 'puppetlabs/firewall', '~> 1.0.0'
+mod 'netmanagers/fail2ban', '~> 1.3.1'
 
 mod 'puppetlabs/postgresql', '~> 3.3.0'
 

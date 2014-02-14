@@ -10,7 +10,10 @@ class base (
   }
 
   if ($has_firewall) {
-    include base::firewall
+    class { 'base::firewall':
+      before => Class['fail2ban'],
+    }
+    class { 'fail2ban': }
   } else {
     notify { 'Not running firewall instructions': }
   }
