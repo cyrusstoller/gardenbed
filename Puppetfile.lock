@@ -12,7 +12,7 @@ FORGE
       example42/puppi (>= 2.0.0)
       puppetlabs/concat (>= 1.0.0)
       puppetlabs/stdlib (>= 4.1.0)
-    puppetlabs/apt (1.4.0)
+    puppetlabs/apt (1.4.1)
       puppetlabs/stdlib (>= 2.2.1)
     puppetlabs/concat (1.1.0-rc1)
       puppetlabs/stdlib (>= 3.0.0)
