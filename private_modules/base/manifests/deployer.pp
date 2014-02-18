@@ -12,12 +12,20 @@ class base::deployer (
     ensure => present,
   }
 
+  file { '/etc/sudoers.d/deployers':
+    mode   => '0440',
+    owner  => root,
+    group  => root,
+    source => 'puppet:///modules/base/deployers'
+  }
+
   $user_defaults = {
     managehome => true,
     password   => 'NP',
+    membership => inclusive,
     ensure     => present,
     shell      => '/bin/bash',
-    groups     => ['deployers', 'admin'],
+    groups     => ['deployers'],
   }
 
   create_resources('user', $deployer_users, $user_defaults)

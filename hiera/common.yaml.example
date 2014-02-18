@@ -40,7 +40,7 @@ users:
     password:   NP
     ensure:     present
     shell:      /bin/bash
-    groups:     ["deployers", "admin"]
+    groups:     ["deployers"]
 ssh_keys:
   deployer_key:
     user: deployer

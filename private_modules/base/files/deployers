@@ -1,0 +1,2 @@
+# No passwords for the deployers so that capistrano will work
+%deployers ALL=NOPASSWD: ALL
