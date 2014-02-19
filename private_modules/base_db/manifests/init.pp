@@ -8,5 +8,6 @@ class base_db(
     postgres_roles     => $postgresql_roles,
     postgres_databases => $postgresql_databases,
     postgres_version   => $postgresql_version,
-  }
+  }->
+  class { 'base_db::backup': }
 }
