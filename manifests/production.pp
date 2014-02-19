@@ -10,7 +10,8 @@ class { 'base_db':
   postgresql_roles     => hiera('postgresql_roles', {}),
   postgresql_databases => hiera('postgresql_databases', {}),
   postgres_password    => hiera('postgres_password', undef),
-  require              => Class['base']
+  require              => Class['base'],
+  perform_backup       => true,
 }
 
 class { 'base_web':
