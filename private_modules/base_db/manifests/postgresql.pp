@@ -5,6 +5,7 @@ class base_db::postgresql (
   $postgres_version   = '9.3',
   $postgres_encoding  = 'UTF8',
   $postgres_locale    = 'en_US.UTF-8',
+  $postgres_password  = undef,
 ) {
   file { '/etc/profile.d/lang.sh':
     ensure  => file,
@@ -21,9 +22,10 @@ class base_db::postgresql (
   }
   ->
   class { '::postgresql::server':
-    version  => $postgres_version,
-    encoding => $postgres_encoding,
-    locale   => $postgres_locale,
+    version           => $postgres_version,
+    encoding          => $postgres_encoding,
+    locale            => $postgres_locale,
+    postgres_password => $postgres_password,
   }
   class { '::postgresql::lib::devel': }
 
