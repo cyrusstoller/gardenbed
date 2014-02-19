@@ -26,6 +26,7 @@ postgresql_databases:
     owner: "deployer"
   my_database:
     owner: "vagrant"
+postgres_password: password12345
     
 rubies: 
   # - 1.9.3-p484

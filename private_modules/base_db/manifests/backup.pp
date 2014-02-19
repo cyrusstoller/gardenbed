@@ -4,13 +4,31 @@ class base_db::backup(
   $days_to_keep        = '7',
   $day_of_week_to_keep = '5',
   $base_backup_dir     = '/home/postgres',
+  $postgres_password   = undef,
 ) {
-  $backup_dir = "${base_backup_dir}/backup"
+
+  $backup_dir        = "${base_backup_dir}/backup"
+  $logfile           = "${base_backup_dir}/logfile"
+  $base_cron_command = "${base_backup_dir}/pg_backup_rotated.sh >> ${logfile}"
 
   file { $base_backup_dir:
     ensure => directory,
     owner  => 'postgres',
     mode   => '0744',
+  }
+
+  if $postgres_password {
+    $pgpass_file  = "${base_backup_dir}/.pgpass"
+    $cron_command = "PGPASSFILE=${pgpass_file} ${base_cron_command}"
+
+    file { $pgpass_file:
+      ensure  => present,
+      content => "*:*:*:postgres:${postgres_password}",
+      owner   => 'postgres',
+      mode    => '0600',
+    }
+  } else {
+    $cron_command = $base_cron_command
   }
 
   file { "${base_backup_dir}/pg_backup.config":
@@ -29,7 +47,7 @@ class base_db::backup(
 
   cron { 'postgres_backups':
     ensure  => present,
-    command => "${base_backup_dir}/pg_backup_rotated.sh >> ${base_backup_dir}/logfile",
+    command => $cron_command,
     user    => 'postgres',
     hour    => '4',
   }
