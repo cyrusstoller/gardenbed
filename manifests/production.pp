@@ -19,7 +19,7 @@ class { 'base_web':
 }
 
 class { 'base_app':
-  rubies       => hiera('rubies', '2.0.0-p353'),
+  rubies       => hiera('rubies', '2.0.0-p451'),
   require      => Class['base'],
-  default_ruby => hiera('default_ruby', '2.0.0-p353'),
+  default_ruby => hiera('default_ruby', '2.0.0-p451'),
 }

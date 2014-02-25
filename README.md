@@ -49,7 +49,7 @@ and you should be good to go.
 - Your website should be viewable at `http://localhost:3000` or `http://localhost:5000` depending on how your application is configured.
 
 ### What's been configured
-- [rbenv](https://github.com/sstephenson/rbenv) with ruby v2.0.0-p353 installed
+- [rbenv](https://github.com/sstephenson/rbenv) with ruby v2.0.0-p451 installed
 - [postgresql](http://www.postgresql.org/) version 9.3.1+ with role/username `vagrant` with password `foobar` and 
 encoding `UTF8` and locale `en_US.UTF-8`.
 - [nodejs](http://nodejs.org/) needed for the asset pipeline

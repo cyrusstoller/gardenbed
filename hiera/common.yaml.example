@@ -29,9 +29,9 @@ postgresql_databases:
 postgres_password: password12345
     
 rubies: 
-  # - 1.9.3-p484
-  - 2.0.0-p353
-default_ruby: 2.0.0-p353
+  # - 1.9.3-p545
+  - 2.0.0-p451
+default_ruby: 2.0.0-p451
 
 users:
   deployer:
