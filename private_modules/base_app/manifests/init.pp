@@ -5,6 +5,7 @@ class base_app (
   $deployers_group     = 'deployers',
   $default_ruby        = '',
   $additional_packages = [],
+  $purge_packages      = [],
 ){
   include nodejs
 
@@ -33,5 +34,9 @@ class base_app (
 
   package { $additional_packages:
     ensure => installed,
+  }
+
+  package { $purge_packages:
+    ensure => purged,
   }
 }

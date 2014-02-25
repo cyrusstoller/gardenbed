@@ -23,4 +23,5 @@ class { 'base_app':
   require             => Class['base'],
   default_ruby        => hiera('default_ruby', '2.0.0-p451'),
   additional_packages => hiera('additional_packages', []),
+  purge_packages      => hiera('purge_packages', []),
 }
