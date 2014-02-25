@@ -10,6 +10,8 @@ passwords
 hiera/*.yml
 hiera/*.yaml
 hiera/*.json
+!hiera/*.yaml.example
+hiera/*.yaml*
 
 modules/
 
