@@ -50,7 +50,7 @@ and you should be good to go.
 
 ### What's been configured
 - [rbenv](https://github.com/sstephenson/rbenv) with ruby v2.0.0-p451 installed
-- [postgresql](http://www.postgresql.org/) version 9.3.1+ with role/username `vagrant` with password `foobar` and 
+- [postgresql](http://www.postgresql.org/) version 9.3.3+ with role/username `vagrant` with password `foobar` and 
 encoding `UTF8` and locale `en_US.UTF-8`.
 - [nodejs](http://nodejs.org/) needed for the asset pipeline
 
@@ -59,7 +59,7 @@ encoding `UTF8` and locale `en_US.UTF-8`.
 - Install [Virtual Box](https://www.virtualbox.org/wiki/Downloads)
 - Install [Vagrant](http://www.vagrantup.com/) using the [installer](http://downloads.vagrantup.com/). Previously you
 could install it as a rubygem, but that behavior has since been deprecated. Go to the website. 
-This was built with [version 1.3.5](http://downloads.vagrantup.com/tags/v1.3.5).
+This was built with [version 1.4.3](https://dl.bintray.com/mitchellh/vagrant/Vagrant-1.4.3.dmg).
 - Clone this repository with `git clone git@github.com:cyrusstoller/gardenbed.git`
 - `cd` into the cloned repository
 - `cp hiera/common.yaml.example hiera/common.yaml`
@@ -80,11 +80,12 @@ $> ssh deployer@192.168.33.11
 - a firewall as recommended by https://library.linode.com/securing-your-server#sph_creating-a-firewall
 - an ssh key for the `deployer` user, which is ideal for practicing deployment with a tool like [Capistrano](http://www.capistranorb.com/)
 - after deploying to this machine you will be able to view `http://192.168.33.11` on port 80
-- [rbenv](https://github.com/sstephenson/rbenv) with ruby v2.0.0-p353 installed
-- [postgresql](http://www.postgresql.org/) version 9.3.1+ with role/username `deployer` with password `foobar` and 
-encoding `UTF8` and locale `en_US.UTF-8`.
+- [rbenv](https://github.com/sstephenson/rbenv) with ruby v2.0.0-p451 installed
+- [postgresql](http://www.postgresql.org/) version 9.3.3+ with role/username `deployer` with password `foobar` and 
+encoding `UTF8` and locale `en_US.UTF-8`. This will also perform a `cron` job for daily backups.
 - [nodejs](http://nodejs.org/) needed for the asset pipeline
 - [nginx](http://nginx.com/) for serving static assets
+- [fail2ban](https://en.wikipedia.org/wiki/Fail2ban)
 
 The `hiera/common.yaml` makes it really easy to provision more system users, create more roles and databases for postgresql, 
 and install more rubies. See below for more details.
@@ -129,8 +130,8 @@ $> echo -n "md5"; echo "<<PASSWORD>><<USERNAME>>" | md5
 - `rubies`
   - Here you list all of the rubies that you want to be installed using [rbenv](https://github.com/sstephenson/rbenv)
   - Be sure to specify the patch number
-  - By default ruby 2.0.0-p247 will be installed
-  - To also install ruby 1.9.3-p448 just uncomment it in your `hiera/common.yaml` file
+  - By default ruby 2.0.0-p451 will be installed
+  - To also install ruby 1.9.3-p545 just uncomment it in your `hiera/common.yaml` file
   
 - `users`
   - Here you list all of the additional users that you would like created on your system.
