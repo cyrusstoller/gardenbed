@@ -13,9 +13,10 @@ class { 'base_db':
 }
 
 class { 'base_app':
-  rubies          => hiera('rubies', '2.0.0-p451'),
-  deployer        => 'vagrant',
-  deployers_group => 'vagrant',
-  require         => Class['base'],
-  default_ruby    => hiera('default_ruby', '2.0.0-p451'),
+  rubies              => hiera('rubies', '2.0.0-p451'),
+  deployer            => 'vagrant',
+  deployers_group     => 'vagrant',
+  require             => Class['base'],
+  default_ruby        => hiera('default_ruby', '2.0.0-p451'),
+  additional_packages => hiera('additional_packages', []),
 }

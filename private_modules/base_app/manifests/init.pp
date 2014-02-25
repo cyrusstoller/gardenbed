@@ -1,9 +1,10 @@
 # This class installs the rbenv, appropriate rubies, and node.js
 class base_app (
-  $rubies          = [],
-  $deployer        = 'deployer',
-  $deployers_group = 'deployers',
-  $default_ruby    = '',
+  $rubies              = [],
+  $deployer            = 'deployer',
+  $deployers_group     = 'deployers',
+  $default_ruby        = '',
+  $additional_packages = [],
 ){
   include nodejs
 
@@ -28,5 +29,9 @@ class base_app (
     owner   => 'root',
     mode    => '0775',
     require => Group['deployers']
+  }
+
+  package { $additional_packages:
+    ensure => installed,
   }
 }
