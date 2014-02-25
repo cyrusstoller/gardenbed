@@ -1,3 +1,6 @@
+additional_packages:
+  - imagemagick
+
 postgresql_roles:
   deployer:
     login:         true
@@ -27,6 +30,9 @@ postgresql_databases:
   my_database:
     owner: "vagrant"
 postgres_password: password12345
+
+purge_packages:
+  # -imagemagick
     
 rubies: 
   # - 1.9.3-p545

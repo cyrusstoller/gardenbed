@@ -19,7 +19,9 @@ class { 'base_web':
 }
 
 class { 'base_app':
-  rubies       => hiera('rubies', '2.0.0-p451'),
-  require      => Class['base'],
-  default_ruby => hiera('default_ruby', '2.0.0-p451'),
+  rubies              => hiera('rubies', '2.0.0-p451'),
+  require             => Class['base'],
+  default_ruby        => hiera('default_ruby', '2.0.0-p451'),
+  additional_packages => hiera('additional_packages', []),
+  purge_packages      => hiera('purge_packages', []),
 }

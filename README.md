@@ -106,6 +106,9 @@ If you are interested in using a non-debian-based box, I suggest checking out: h
 - Copy `hiera/common.yaml.example` to `hiera/common.yaml`
 - You should see five top level keys in this `yaml` file. We'll go through what each sets up.
 
+- `additional_packages`
+  - List any other packages you want installed (e.g. imagemagick)
+
 - `postgresql_roles`
   - Here you should describe all of the roles you want defined with postgresql.
   - By default, there's a role called `deployer` with password set to `foobar`.
@@ -126,6 +129,9 @@ $> echo -n "md5"; echo "<<PASSWORD>><<USERNAME>>" | md5
   - The `owner` should be defined above in the `postgresql_roles` section
   - You can add as many databases as you like here by adding new keys
   - If you uncomment `my_database` you would have another database called `my_database`
+
+- `purge_packages`
+  - List any packages that you want purged from the sytem
   
 - `rubies`
   - Here you list all of the rubies that you want to be installed using [rbenv](https://github.com/sstephenson/rbenv)
