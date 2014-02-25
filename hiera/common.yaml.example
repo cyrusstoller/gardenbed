@@ -9,9 +9,7 @@ postgresql_roles:
     # password = "foobar"
     # md5 of password + username: md56a7cf5e42712e5a19e5ea884d8644ef8
     # easily determined computed on the command line with:
-    # $> echo -n "md5"; echo -n "foobardeployer" | md5
-    # Or more generally:
-    # $> echo -n "md5"; echo -n "#{password}#{username}" | md5
+    # $> scripts/password_hash.sh deployer foobar
     password_hash: "md56a7cf5e42712e5a19e5ea884d8644ef8"
   vagrant:
     login:         true
@@ -20,9 +18,7 @@ postgresql_roles:
     # password = "foobar"
     # md5 of password + username: md54bed967bd13dba810255375f600eceb3
     # easily determined computed on the command line with:
-    # $> echo -n "md5"; echo -n "foobarvagrant" | md5
-    # Or more generally:
-    # $> echo -n "md5"; echo -n "#{password}#{username}" | md5
+    # $> scripts/password_hash.sh vagrant foobar
     password_hash: "md54bed967bd13dba810255375f600eceb3"
 postgresql_databases:
   revtilt_production:
