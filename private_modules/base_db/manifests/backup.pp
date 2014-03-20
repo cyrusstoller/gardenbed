@@ -7,8 +7,8 @@ class base_db::backup(
   $postgres_password   = undef,
 ) {
 
-  $backup_dir        = "${base_backup_dir}/backup"
-  $logfile           = "${base_backup_dir}/logfile"
+  $backup_dir        = "${base_backup_dir}/"
+  $logfile           = "${base_backup_dir}/pg_backup.log"
   $base_cron_command = "${base_backup_dir}/pg_backup_rotated.sh >> ${logfile}"
 
   file { $base_backup_dir:
@@ -43,6 +43,12 @@ class base_db::backup(
     content => template('base_db/pg_backup_rotated.sh.erb'),
     owner   => 'postgres',
     mode    => '0744',
+  }
+
+  file { '/etc/logrotate.d/postgres_db_backup':
+    ensure  => present,
+    content => template('base_db/postgres_db_backup.erb'),
+    mode    => '0644',
   }
 
   cron { 'postgres_backups':
