@@ -7,7 +7,7 @@ class base_db::backup(
   $postgres_password   = undef,
 ) {
 
-  $backup_dir        = "${base_backup_dir}/backup"
+  $backup_dir        = "${base_backup_dir}/"
   $logfile           = "${base_backup_dir}/pg_backup.log"
   $base_cron_command = "${base_backup_dir}/pg_backup_rotated.sh >> ${logfile}"
 
