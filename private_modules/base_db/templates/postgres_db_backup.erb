@@ -1,0 +1,17 @@
+# example logrotate config file, I usually keep this in
+# /etc/logrotate.d/* on my Debian systems
+#
+# See the logrotate(8) manpage for more information:
+#    http://linux.die.net/man/8/logrotate
+
+# Modify the following glob to match the logfiles your app writes to:
+<%= @base_backup_dir %>/*.log {
+        weekly
+        rotate <%= @weeks_to_keep %>
+        compress
+
+        delaycompress
+        missingok
+
+        create 0644 postgres postgres
+}
