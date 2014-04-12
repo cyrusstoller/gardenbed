@@ -25,3 +25,13 @@ class { 'base_app':
   additional_packages => hiera('additional_packages', []),
   purge_packages      => hiera('purge_packages', []),
 }
+
+$s3_info = hiera('s3', {})
+
+class { 's3cmd':
+  user               => 'postgres',
+  group              => 'postgres',
+  access_key         => $s3_info['access_key'],
+  secret_key         => $s3_info['secret_key'],
+  encrypted_password => $s3_info['encrypted_password'],
+}

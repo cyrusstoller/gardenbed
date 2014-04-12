@@ -54,6 +54,11 @@ PATH
   specs:
     base_web (0.0.1)
 
+PATH
+  remote: ./private_modules/s3cmd
+  specs:
+    s3cmd (0.0.1)
+
 DEPENDENCIES
   alup/rbenv (>= 0)
   attachmentgenie/ssh (~> 1.2.2)
@@ -66,4 +71,5 @@ DEPENDENCIES
   puppetlabs/firewall (~> 1.0.0)
   puppetlabs/nodejs (~> 0.4.0)
   puppetlabs/postgresql (~> 3.3.0)
+  s3cmd (>= 0)
 

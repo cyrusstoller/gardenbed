@@ -3,15 +3,15 @@ class base_db::backup(
   $weeks_to_keep       = '3',
   $days_to_keep        = '7',
   $day_of_week_to_keep = '5',
+  $backup_dir          = '/var/backups/',
   $base_backup_dir     = '/home/postgres',
   $postgres_password   = undef,
 ) {
 
-  $backup_dir        = "${base_backup_dir}/"
   $logfile           = "${base_backup_dir}/pg_backup.log"
   $base_cron_command = "${base_backup_dir}/pg_backup_rotated.sh >> ${logfile}"
 
-  file { $base_backup_dir:
+  file { [$base_backup_dir, $backup_dir]:
     ensure => directory,
     owner  => 'postgres',
     mode   => '0744',

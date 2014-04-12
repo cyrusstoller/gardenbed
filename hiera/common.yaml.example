@@ -35,6 +35,13 @@ rubies:
   - 2.0.0-p451
 default_ruby: 2.0.0-p451
 
+s3:
+  backup: false
+  # # http://aws.amazon.com ==> 'security credentials'
+  # access_key: "123"
+  # secret_key: "abc"
+  # encrypted_password: "foobar" # scripts/random_password.sh if you're having trouble thinking of one
+
 users:
   deployer:
     comment:    Deployer User
