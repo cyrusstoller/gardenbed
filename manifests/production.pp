@@ -29,9 +29,17 @@ class { 'base_app':
 $s3_info = hiera('s3', {})
 
 class { 's3cmd':
-  user           => 'deployer',
-  group          => 'deployer',
+  user           => $s3_info['user'],
+  group          => $s3_info['user'],
   access_key     => $s3_info['access_key'],
   secret_key     => $s3_info['secret_key'],
   gpg_passphrase => $s3_info['gpg_passphrase'],
+}
+
+if $s3_info['bucket'] {
+  $backup_directories = {
+    '/var/db_backups/' => {}
+  }
+  $backup_defaults = { user => $s3_info['user'], bucket => $s3_info['bucket'] }
+  create_resources('s3cmd::backup', $backup_directories, $backup_defaults)
 }

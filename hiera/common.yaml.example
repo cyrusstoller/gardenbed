@@ -41,6 +41,8 @@ s3:
   # access_key: "123"
   # secret_key: "abc"
   # gpg_passphrase: "foobar" # scripts/random_password.sh if you're having trouble thinking of one
+  # bucket: my_bucket
+  # user: deployer # system user not amazon user
 
 users:
   deployer:
