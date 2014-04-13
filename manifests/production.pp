@@ -29,9 +29,9 @@ class { 'base_app':
 $s3_info = hiera('s3', {})
 
 class { 's3cmd':
-  user               => 'deployer',
-  group              => 'deployer',
-  access_key         => $s3_info['access_key'],
-  secret_key         => $s3_info['secret_key'],
-  encrypted_password => $s3_info['encrypted_password'],
+  user           => 'deployer',
+  group          => 'deployer',
+  access_key     => $s3_info['access_key'],
+  secret_key     => $s3_info['secret_key'],
+  gpg_passphrase => $s3_info['gpg_passphrase'],
 }

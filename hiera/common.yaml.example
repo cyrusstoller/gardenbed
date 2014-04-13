@@ -40,7 +40,7 @@ s3:
   # # http://aws.amazon.com ==> 'security credentials'
   # access_key: "123"
   # secret_key: "abc"
-  # encrypted_password: "foobar" # scripts/random_password.sh if you're having trouble thinking of one
+  # gpg_passphrase: "foobar" # scripts/random_password.sh if you're having trouble thinking of one
 
 users:
   deployer:

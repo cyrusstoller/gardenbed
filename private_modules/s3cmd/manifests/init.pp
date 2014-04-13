@@ -1,15 +1,21 @@
 # Class to install s3cmd credentials
 # Ref: http://abhishek-tiwari.com/hacking/jekyll-amazon-s3-vagrant-and-puppet
 class s3cmd (
-  $user               = 'deployer',
-  $group              = 'deployer',
-  $access_key         = undef,
-  $secret_key         = undef,
-  $encrypted_password = undef,
+  $user           = 'deployer',
+  $group          = 'deployer',
+  $access_key     = undef,
+  $secret_key     = undef,
+  $gpg_passphrase = undef,
 ) {
   $base_dir = "/home/${s3cmd::user}"
 
-  if $access_key and $secret_key and $encrypted_password {
+  if $access_key and $secret_key {
+    if $gpg_passphrase {
+      $encrypt = 'True'
+    } else {
+      $encrypt = 'False'
+    }
+
     package { 's3cmd':
       ensure => installed,
     }
