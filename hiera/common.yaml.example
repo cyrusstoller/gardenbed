@@ -35,6 +35,15 @@ rubies:
   - 2.0.0-p451
 default_ruby: 2.0.0-p451
 
+s3:
+  backup: false
+  # # http://aws.amazon.com ==> 'security credentials'
+  # access_key: "123"
+  # secret_key: "abc"
+  # gpg_passphrase: "foobar" # scripts/random_password.sh if you're having trouble thinking of one
+  # bucket: vps_database_backups
+  # user: deployer # system user not amazon user
+
 users:
   deployer:
     comment:    Deployer User
