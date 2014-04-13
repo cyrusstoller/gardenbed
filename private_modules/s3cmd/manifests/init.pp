@@ -1,8 +1,8 @@
 # Class to install s3cmd credentials
 # Ref: http://abhishek-tiwari.com/hacking/jekyll-amazon-s3-vagrant-and-puppet
 class s3cmd (
-  $user               = 'postgres',
-  $group              = 'postgres',
+  $user               = 'deployer',
+  $group              = 'deployer',
   $access_key         = undef,
   $secret_key         = undef,
   $encrypted_password = undef,
@@ -18,7 +18,7 @@ class s3cmd (
       ensure  => present,
       owner   => $user,
       group   => $group,
-      mode    => '0640',
+      mode    => '0600',
       # content or source or target
       content => template('s3cmd/s3cfg.erb'),
     }
