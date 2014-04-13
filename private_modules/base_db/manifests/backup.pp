@@ -3,7 +3,7 @@ class base_db::backup(
   $weeks_to_keep       = '3',
   $days_to_keep        = '7',
   $day_of_week_to_keep = '5',
-  $backup_dir          = '/var/backups/',
+  $backup_dir          = '/var/db_backups/',
   $base_backup_dir     = '/home/postgres',
   $postgres_password   = undef,
 ) {

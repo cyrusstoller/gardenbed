@@ -5,7 +5,7 @@ class base_db(
   $postgresql_version   = '9.3',
   $postgres_password    = undef,
   $perform_backup       = undef,
-  $backup_dir           = '/var/backups',
+  $backup_dir           = '/var/db_backups/',
 ) {
   class { 'base_db::postgresql':
     postgres_roles     => $postgresql_roles,
