@@ -33,7 +33,7 @@ function rsync_tmp_directory {
 	echo "rsyncing puppet manifests to: ${DESTINATION}"
 	echo ">> rsync -r ${TMP_DIRECTORY} ${DESTINATION}"
 
-	rsync -r $TMP_DIRECTORY $DESTINATION
+	rsync -r $TMP_DIRECTORY/* $DESTINATION
 
 	rm -rf $TMP_DIRECTORY
 }
