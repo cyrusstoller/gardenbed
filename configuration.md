@@ -36,7 +36,12 @@ $> echo -n "md5"; echo "<<PASSWORD>><<USERNAME>>" | md5
   - Be sure to specify the patch number
   - By default ruby 2.0.0-p451 will be installed
   - To also install ruby 1.9.3-p545 just uncomment it in your `hiera/common.yaml` file
-  
+
+- `s3` (optional, this can be omitted)
+  - Here you list your AWS security credentials (ie `access_key` and `secret_key`)
+  - You can specify a `gpg_passphrase` if you want to encrypt data before sending it to S3
+  - You specify the `bucket name` for automatic database backups and the `user` that will run the `cron` job
+
 - `users`
   - Here you list all of the additional users that you would like created on your system.
   - By default, Vagrant will add another user named `vagrant` with password `vagrant`.
