@@ -25,7 +25,7 @@ FORGE
       puppetlabs/concat (< 2.0.0, >= 1.0.0)
       puppetlabs/firewall (>= 0.0.4)
       puppetlabs/stdlib (< 5.0.0, >= 3.2.0)
-    puppetlabs/stdlib (4.1.0)
+    puppetlabs/stdlib (4.2.1)
 
 GIT
   remote: git@github.com:alup/puppet-rbenv.git
