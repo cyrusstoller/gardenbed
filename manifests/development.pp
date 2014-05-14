@@ -4,6 +4,7 @@ class { 'base':
   # # Uncomment the following line if you are provisioning a Vagrant
   # # box for development and want more than ports 80 and 443 open
   has_firewall => false,
+  rails_env    => hiera('default_rails_env', 'development'),
 }
 
 class { 'base_db':

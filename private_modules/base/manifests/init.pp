@@ -3,7 +3,8 @@ class base (
   $users        = {},
   $ssh_keys     = {},
   $ssh_port     = 22,
-  $has_firewall = true
+  $has_firewall = true,
+  $rails_env    = 'production'
 ) {
   package { 'vim':
     ensure => installed
@@ -25,6 +26,10 @@ class base (
   class { 'base::deployer':
     deployer_users => $users,
     ssh_keys       => $ssh_keys,
+  }
+
+  class { 'base::environment':
+    rails_env => $rails_env
   }
 
   # from http://forge.puppetlabs.com/puppetlabs/apt

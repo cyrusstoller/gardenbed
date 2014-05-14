@@ -37,6 +37,12 @@ $> echo -n "md5"; echo "<<PASSWORD>><<USERNAME>>" | md5
   - By default ruby 2.0.0-p451 will be installed
   - To also install ruby 1.9.3-p545 just uncomment it in your `hiera/common.yaml` file
 
+- `default_ruby`
+  - Set to 2.0.0-p451
+
+- `default_rails_env`
+  - Set to `development` or `production` by default
+
 - `s3` (optional, this can be omitted)
   - Here you list your AWS security credentials (ie `access_key` and `secret_key`)
   - You can specify a `gpg_passphrase` if you want to encrypt data before sending it to S3
