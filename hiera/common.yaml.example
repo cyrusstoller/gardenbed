@@ -34,7 +34,7 @@ rubies:
   # - 1.9.3-p545
   - 2.0.0-p451
 default_ruby: 2.0.0-p451
-default_rails_env: production
+# default_rails_env: production
 
 s3:
   # # http://aws.amazon.com ==> 'security credentials'
