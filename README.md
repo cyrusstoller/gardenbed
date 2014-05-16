@@ -47,6 +47,7 @@ $> vagrant ssh
 - Then go to your project directory in `/vagrant` and `bundle install` and `bundle exec rails s` or `bundle exec foreman start` 
 and you should be good to go.
 - Your website should be viewable at `http://localhost:3000` or `http://localhost:5000` depending on how your application is configured.
+- If you want to add additional packages from `apt` configure `hiera/common.yaml` which was created during the bootstrap process. The `hiera/common.yaml` is used for setting up sensitive information that is unique to each system that is being setup. For more instructions on this read see the [configuration section](#configuration).
 
 ### What's been configured
 - [rbenv](https://github.com/sstephenson/rbenv) with ruby v2.0.0-p451 installed
@@ -88,7 +89,7 @@ encoding `UTF8` and locale `en_US.UTF-8`. This will also perform a `cron` job fo
 - [fail2ban](https://en.wikipedia.org/wiki/Fail2ban)
 
 The `hiera/common.yaml` makes it really easy to provision more system users, create more roles and databases for postgresql, 
-and install more rubies. See below for more details.
+and install more rubies. See [below](#configuration) for more details.
 
 ## Vagrant
 
