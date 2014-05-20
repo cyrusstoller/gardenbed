@@ -34,11 +34,11 @@ $> echo -n "md5"; echo "<<PASSWORD>><<USERNAME>>" | md5
 - `rubies`
   - Here you list all of the rubies that you want to be installed using [rbenv](https://github.com/sstephenson/rbenv)
   - Be sure to specify the patch number
-  - By default ruby 2.0.0-p451 will be installed
+  - By default ruby 2.0.0-p481 will be installed
   - To also install ruby 1.9.3-p545 just uncomment it in your `hiera/common.yaml` file
 
 - `default_ruby`
-  - Set to 2.0.0-p451
+  - Set to 2.0.0-p481
 
 - `default_rails_env`
   - Set to `development` or `production` by default
