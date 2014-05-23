@@ -25,6 +25,7 @@ could install it as a rubygem, but that behavior has since been deprecated. Go t
 This was built with [version 1.6.2](https://dl.bintray.com/mitchellh/vagrant/Vagrant-1.6.2.dmg).
 - Clone this repository with `git clone git@github.com:cyrusstoller/gardenbed.git`
 - `cd` into the cloned repository
+- Double check that you have `bundler` installed
 - Run the following command
 
 ```bash
@@ -65,6 +66,7 @@ This was built with [version 1.6.2](https://dl.bintray.com/mitchellh/vagrant/Vag
 - `cd` into the cloned repository
 - `cp hiera/common.yaml.example hiera/common.yaml`
 - Go to `https://github.com/<<GITHUB_USERNAME>>.keys` and copy your SSH key into the last line of your `hiera/common.yaml`
+- Double check that you have `bundler` installed
 - Run the following command
 
 ```bash
