@@ -1,4 +1,4 @@
-forge "http://forge.puppetlabs.com"
+forge "https://forgeapi.puppetlabs.com"
 
 # Public Modules
 
@@ -15,8 +15,8 @@ mod 'puppetlabs/nodejs', '~> 0.4.0'
 
 # Private Modules
 
-mod 'base',     :path => "./private_modules/base"
-mod 'base_db',  :path => "./private_modules/base_db"
-mod 'base_web', :path => "./private_modules/base_web"
-mod 'base_app', :path => "./private_modules/base_app"
-mod 's3cmd',    :path => "./private_modules/s3cmd"
+mod 'gardenbed/base',     :path => "./private_modules/base"
+mod 'gardenbed/base_db',  :path => "./private_modules/base_db"
+mod 'gardenbed/base_web', :path => "./private_modules/base_web"
+mod 'gardenbed/base_app', :path => "./private_modules/base_app"
+mod 'gardenbed/s3cmd',    :path => "./private_modules/s3cmd"
