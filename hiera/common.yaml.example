@@ -54,7 +54,11 @@ users:
     shell:      /bin/bash
     groups:     ["deployers"]
 ssh_keys:
-  deployer_key:
+  # Find this ssh key in `~/.ssh/id_rsa.pub` - be sure to truncate the prefix `ssh-rsa`
+  # Or for users with Github accounts you can use https://github.com/cyrusstoller.keys
+  deployer_key1:
     user: deployer
-    # Find this ssh key in `~/.ssh/id_rsa.pub` - be sure to truncate the prefix `ssh-rsa`
     key: "AAAAB3NzaC1yc2EAAAABIwAAAQEA9Y9X+SMTIass3X2CmxnZ92d2IwhgFow86JBXju52pxOOXgEJadoK42A8luhvazKgaNkoThmeu/NzEwFYM51lDxXYzh/sUsZjLsFmoJiTuZORlKXZUu8K4k1IFSnR81B69js5gRPvTHTWm4JFzt6XG2fMFi/Q2BPvrMAuBcOE1Dz1ypXf2W5Qraa4fyl4Ayd+rBRX2o1tOSpO9AhBjTKCx0Y43/rml6WMgfSc1dd9+TtZgWzs/dpln75UgLhWrqCulG49fDvrnQGBmreNpVLQejJmsNjWxGbDLrevXUyeSKie3sZmzJdU1uh8/40ij/tRULSY6bhfTw+atcYaOU3dOw=="
+  deployer_key2:
+    user: deployer
+    key: "AAAAB3NzaC1yc2EAAAADAQABAAABAQC0HVWmsg8G2ZeIbleed0N+frqmZ0rMy1BKcw475HEY1CEOFIt4M6xlhX06oVtPp43kp9XwLelpp7stciM5AdisMazu3rES3YUYL1PseIrmZWnQf+DnklohmH508pAyB9tP2gKH5OyAT1T7tSXBvybDcY4s/2EiZffoIxtfQfDkfbcYkvrgcJtiRDBU2+3y8pkzb6kOsXt3ihqXI7/uZBNGEaObhGLT5lBdd/L5j4N8vm58UKOOo32+P2SBd+lx9q7siC1FfH+ZJaaVk6W0nRnCu55tRNSrUNny9qAvHWVAd+pFBlBgtcVHPrRzoOS+A3S5FpnNwbpSTNzyCjzTzoX7"
