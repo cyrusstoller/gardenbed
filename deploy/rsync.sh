@@ -6,10 +6,9 @@ TMP_DIRECTORY=`mktemp -d -t gardenbed_puppet`
 function invalid_usage {
   echo
   echo "Invalid usage of rsync.sh"
-  echo
   echo "You need to provide a destination"
-  echo
   echo "usage: $0 DESTINATION"
+  echo
   exit 1
 }
 
