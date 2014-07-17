@@ -10,14 +10,14 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # please see the online documentation at vagrantup.com.
 
   # Every Vagrant virtual environment requires a box to build off of.
-  config.vm.box = "precise64_with_puppet3_3_2"
+  config.vm.box = "trusty64_with_puppet3_6_2"
 
   # The url from where the 'config.vm.box' box will be fetched if it
   # doesn't already exist on the user's system.
-  config.vm.box_url = "http://files.vagrantup.com/precise64.box"
+  config.vm.box_url = "http://cloud-images.ubuntu.com/vagrant/trusty/current/trusty-server-cloudimg-amd64-vagrant-disk1.box"
   
   ####################################################################
-  # # Comment this out once you've upgraded your box to Puppet v3.3.1+
+  # # Comment this out once you've upgraded your box to Puppet v3.6.2+
   # # to increase the speed of privisioning your virtual machine
   ####################################################################
   config.vm.provision :shell, :path => "scripts/upgrade_debian_based_puppet.sh"
@@ -31,7 +31,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.network :forwarded_port, guest: 3000, host: 3000
   config.vm.network :forwarded_port, guest: 5000, host: 5000
 
-  config.vm.hostname = "utility-12-04-vm"
+  config.vm.hostname = "utility-14-04-vm"
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
