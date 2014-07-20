@@ -1,6 +1,7 @@
 FORGE
   remote: https://forgeapi.puppetlabs.com
   specs:
+    alup/rbenv (1.2.0)
     attachmentgenie/ssh (1.2.2)
       puppetlabs/stdlib (>= 2.2.1)
     example42/puppi (2.1.9)
@@ -32,13 +33,6 @@ FORGE
     puppetlabs/stdlib (4.3.2)
     stahnma/epel (0.1.0)
 
-GIT
-  remote: git@github.com:alup/puppet-rbenv.git
-  ref: 16bd471c3713b317fa47ed9747f4ff2cd82dd317
-  sha: 16bd471c3713b317fa47ed9747f4ff2cd82dd317
-  specs:
-    alup/rbenv (1.2.0)
-
 PATH
   remote: ./private_modules/base
   specs:
@@ -65,7 +59,7 @@ PATH
     gardenbed/s3cmd (0.0.1)
 
 DEPENDENCIES
-  alup/rbenv (>= 0)
+  alup/rbenv (~> 1.2.0)
   attachmentgenie/ssh (~> 1.2.2)
   gardenbed/base (>= 0)
   gardenbed/base_app (>= 0)

@@ -10,7 +10,7 @@ mod 'puppetlabs/postgresql', '~> 3.3.0'
 
 mod 'jfryman/nginx', '~> 0.0.7'
 
-mod 'alup/rbenv', :git => 'git@github.com:alup/puppet-rbenv.git', :ref => "16bd471c3713b317fa47ed9747f4ff2cd82dd317"
+mod 'alup/rbenv', '~> 1.2.0'
 mod 'puppetlabs/nodejs', '~> 0.4.0'
 
 mod 'garethr/docker', '~> 1.1.3'
