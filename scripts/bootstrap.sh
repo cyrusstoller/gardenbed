@@ -5,7 +5,7 @@ function invalid_usage {
   echo "Invalid usage of bootstrap.sh"
   echo
   echo "You need to provide a bootstrap environment as an argument"
-  echo "valid options include: 'development', 'staging'"
+  echo "valid options include: 'development', 'staging', 'docker'"
   echo
   echo "usage: $0 BOOTSTRAP_ENVIRONMENT"
   exit 1
@@ -24,6 +24,10 @@ case $1 in
   staging)
     echo "Starting staging bootstrap process ..."
     cp "$BASE_PATH/Vagrantfile.staging" "$BASE_PATH/Vagrantfile"
+    ;;
+  docker)
+    echo "Starting docker bootstrap process ..."
+    cp "$BASE_PATH/Vagrantfile.docker" "$BASE_PATH/Vagrantfile"
     ;;
   *)
     invalid_usage

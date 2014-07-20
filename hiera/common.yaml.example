@@ -53,6 +53,8 @@ users:
     ensure:     present
     shell:      /bin/bash
     groups:     ["deployers"]
+    # # use this instead if installing docker
+    # groups:     ["deployers", "docker"]
 ssh_keys:
   # Find this ssh key in `~/.ssh/id_rsa.pub` - be sure to truncate the prefix `ssh-rsa`
   # Or for users with Github accounts you can use https://github.com/cyrusstoller.keys
