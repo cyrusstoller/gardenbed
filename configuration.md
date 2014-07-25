@@ -30,6 +30,9 @@ $> echo -n "md5"; echo "<<PASSWORD>><<USERNAME>>" | md5
 
 - `purge_packages`
   - List any packages that you want purged from the sytem
+
+- `redis_version`
+  - Specify the [redis](http://redis.io/) version number. This defaults to 2.8.13.
   
 - `rubies`
   - Here you list all of the rubies that you want to be installed using [rbenv](https://github.com/sstephenson/rbenv)

@@ -1,7 +1,7 @@
-# Basic Puppet Template for a basic Ruby + PostgreSQL + Nginx stack
+# Basic Puppet Template for a basic Ruby + PostgreSQL + Nginx (+ Redis) stack
 
 These puppet manifests are intended to be a starting point for using [Ruby](https://www.ruby-lang.org/),
-with [PostgreSQL](http://www.postgresql.org/) and [Nginx](http://nginx.com/).
+with [PostgreSQL](http://www.postgresql.org/), [Nginx](http://nginx.com/), and optionally [Redis](http://redis.io/).
 
 Some of my projects no longer seem to fit neatly into the Heroku's offerings, so I decided to
 migrate them to VPS services like [Linode](https://www.linode.com/), [Digital Ocean](https://digitalocean.com/)
@@ -55,6 +55,7 @@ and you should be good to go.
 - [postgresql](http://www.postgresql.org/) version 9.3.3+ with role/username `vagrant` with password `foobar` and 
 encoding `UTF8` and locale `en_US.UTF-8`.
 - [nodejs](http://nodejs.org/) needed for the asset pipeline
+- [redis](http://redis.io/)
 
 ## Getting started for staging / mock-production
 
@@ -89,6 +90,7 @@ encoding `UTF8` and locale `en_US.UTF-8`. This will also perform a `cron` job fo
 - [nodejs](http://nodejs.org/) needed for the asset pipeline
 - [nginx](http://nginx.com/) for serving static assets
 - [fail2ban](https://en.wikipedia.org/wiki/Fail2ban)
+- [redis](http://redis.io/)
 
 The `hiera/common.yaml` makes it really easy to provision more system users, create more roles and databases for postgresql, 
 and install more rubies. See [below](#configuration) for more details.

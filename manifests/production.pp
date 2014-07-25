@@ -16,7 +16,7 @@ class { 'base_db':
 }
 
 # class { 'redis':
-#   version          => '2.8.13',
+#   version          => hiera('redis_version', '2.8.13'),
 #   redis_max_memory => '256mb'
 # }
 
