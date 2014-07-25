@@ -15,6 +15,11 @@ class { 'base_db':
   perform_backup       => true,
 }
 
+# class { 'redis':
+#   version          => '2.8.13',
+#   redis_max_memory => '256mb'
+# }
+
 class { 'base_web':
   require => Class['base']
 }

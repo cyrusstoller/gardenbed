@@ -14,6 +14,7 @@ mod 'alup/rbenv', '~> 1.2.0'
 mod 'puppetlabs/nodejs', '~> 0.4.0'
 
 mod 'garethr/docker', '~> 1.1.3'
+mod 'thomasvandoren/redis', '~> 0.10.0'
 
 # Private Modules
 
