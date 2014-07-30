@@ -13,6 +13,11 @@ hiera/*.json
 !hiera/*.yaml.example
 hiera/*.yaml*
 
+manifests/*.pp
+!manifests/development.pp
+!manifests/docker.pp
+!manifests/production.pp
+
 modules/
 
 Vagrantfile
