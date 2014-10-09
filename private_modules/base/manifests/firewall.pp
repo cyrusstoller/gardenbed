@@ -15,8 +15,8 @@ class base::firewall {
   class { '::firewall': }
 
   firewall { '099 allow all outbound traffic':
-    chain   => 'OUTPUT',
-    action  => accept,
+    chain  => 'OUTPUT',
+    action => accept,
   }
 
   firewall { '100 allow http and https access':
