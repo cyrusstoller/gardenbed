@@ -1,81 +1,81 @@
 FORGE
   remote: https://forgeapi.puppetlabs.com
   specs:
-    alup/rbenv (1.2.0)
-    attachmentgenie/ssh (1.2.2)
-      puppetlabs/stdlib (>= 2.2.1)
-    example42/puppi (2.1.9)
-    garethr/docker (1.1.3)
-      puppetlabs/apt (>= 1.1.0)
-      puppetlabs/stdlib (>= 4.1.0)
-      stahnma/epel (>= 0.0.6)
-    jfryman/nginx (0.0.9)
-      puppetlabs/apt (>= 1.0.0)
-      puppetlabs/concat (>= 1.0.0)
-      puppetlabs/stdlib (>= 0.1.6)
-    maestrodev/wget (1.4.5)
-    netmanagers/fail2ban (1.3.1)
-      example42/puppi (>= 2.0.0)
-      puppetlabs/concat (>= 1.0.0)
-      puppetlabs/stdlib (>= 4.1.0)
-    puppetlabs/apt (1.5.2)
-      puppetlabs/stdlib (>= 2.2.1)
-    puppetlabs/concat (1.1.0)
-      puppetlabs/stdlib (>= 4.0.0)
-    puppetlabs/firewall (1.0.2)
-    puppetlabs/gcc (0.2.0)
-    puppetlabs/nodejs (0.4.0)
-      puppetlabs/apt (>= 0.0.3)
-      puppetlabs/stdlib (>= 2.0.0)
-    puppetlabs/postgresql (3.3.3)
-      puppetlabs/apt (< 2.0.0, >= 1.1.0)
-      puppetlabs/concat (< 2.0.0, >= 1.0.0)
-      puppetlabs/firewall (>= 0.0.4)
-      puppetlabs/stdlib (< 5.0.0, >= 3.2.0)
-    puppetlabs/stdlib (4.3.2)
-    stahnma/epel (0.1.0)
-    thomasvandoren/redis (0.10.0)
-      maestrodev/wget (>= 1.1.0)
-      puppetlabs/gcc (>= 0.0.3)
+    alup-rbenv (1.2.0)
+    attachmentgenie-ssh (1.2.2)
+      puppetlabs-stdlib (>= 2.2.1)
+    example42-puppi (2.1.10)
+    garethr-docker (1.1.4)
+      puppetlabs-apt (>= 1.1.0)
+      puppetlabs-stdlib (>= 4.1.0)
+      stahnma-epel (>= 0.0.6)
+    jfryman-nginx (0.0.10)
+      puppetlabs-apt (>= 1.0.0)
+      puppetlabs-concat (>= 1.1.0)
+      puppetlabs-stdlib (>= 3.0.0)
+    maestrodev-wget (1.5.6)
+    netmanagers-fail2ban (1.3.1)
+      example42-puppi (>= 2.0.0)
+      puppetlabs-concat (>= 1.0.0)
+      puppetlabs-stdlib (>= 4.1.0)
+    puppetlabs-apt (1.6.0)
+      puppetlabs-stdlib (>= 2.2.1)
+    puppetlabs-concat (1.1.1)
+      puppetlabs-stdlib (< 5.0.0, >= 3.2.0)
+    puppetlabs-firewall (1.0.2)
+    puppetlabs-gcc (0.2.0)
+    puppetlabs-nodejs (0.4.0)
+      puppetlabs-apt (>= 0.0.3)
+      puppetlabs-stdlib (>= 2.0.0)
+    puppetlabs-postgresql (3.3.3)
+      puppetlabs-apt (< 2.0.0, >= 1.1.0)
+      puppetlabs-concat (< 2.0.0, >= 1.0.0)
+      puppetlabs-firewall (>= 0.0.4)
+      puppetlabs-stdlib (< 5.0.0, >= 3.2.0)
+    puppetlabs-stdlib (4.3.2)
+    stahnma-epel (1.0.0)
+    thomasvandoren-redis (0.10.0)
+      maestrodev-wget (>= 1.1.0)
+      puppetlabs-gcc (>= 0.0.3)
 
 PATH
   remote: ./private_modules/base
   specs:
-    gardenbed/base (0.0.1)
+    gardenbed-base (0.0.1)
 
 PATH
   remote: ./private_modules/base_app
   specs:
-    gardenbed/base_app (0.0.1)
+    gardenbed-base_app (0.0.1)
 
 PATH
   remote: ./private_modules/base_db
   specs:
-    gardenbed/base_db (0.0.1)
+    gardenbed-base_db (0.0.1)
 
 PATH
   remote: ./private_modules/base_web
   specs:
-    gardenbed/base_web (0.0.1)
+    gardenbed-base_web (0.0.1)
 
 PATH
   remote: ./private_modules/s3cmd
   specs:
-    gardenbed/s3cmd (0.0.1)
+    gardenbed-s3cmd (0.0.1)
 
 DEPENDENCIES
-  alup/rbenv (~> 1.2.0)
-  attachmentgenie/ssh (~> 1.2.2)
-  gardenbed/base (>= 0)
-  gardenbed/base_app (>= 0)
-  gardenbed/base_db (>= 0)
-  gardenbed/base_web (>= 0)
-  gardenbed/s3cmd (>= 0)
-  garethr/docker (~> 1.1.3)
-  jfryman/nginx (~> 0.0.7)
-  netmanagers/fail2ban (~> 1.3.1)
-  puppetlabs/firewall (~> 1.0.0)
-  puppetlabs/nodejs (~> 0.4.0)
-  puppetlabs/postgresql (~> 3.3.0)
-  thomasvandoren/redis (~> 0.10.0)
+  alup-rbenv (~> 1.2.0)
+  attachmentgenie-ssh (~> 1.2.2)
+  gardenbed-base (>= 0)
+  gardenbed-base_app (>= 0)
+  gardenbed-base_db (>= 0)
+  gardenbed-base_web (>= 0)
+  gardenbed-s3cmd (>= 0)
+  garethr-docker (~> 1.1.3)
+  jfryman-nginx (~> 0.0.7)
+  netmanagers-fail2ban (~> 1.3.1)
+  puppetlabs-firewall (~> 1.0.0)
+  puppetlabs-nodejs (~> 0.4.0)
+  puppetlabs-postgresql (~> 3.3.0)
+  thomasvandoren-redis (~> 0.10.0)
 
