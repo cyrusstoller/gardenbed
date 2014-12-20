@@ -19,11 +19,11 @@ class { 'base_db':
 # }
 
 class { 'base_app':
-  rubies              => hiera('rubies', '2.0.0-p481'),
+  rubies              => hiera('rubies', '2.1.2'),
   deployer            => 'vagrant',
   deployers_group     => 'vagrant',
   require             => Class['base'],
-  default_ruby        => hiera('default_ruby', '2.0.0-p481'),
+  default_ruby        => hiera('default_ruby', '2.1.2'),
   additional_packages => hiera('additional_packages', []),
   purge_packages      => hiera('purge_packages', []),
 }

@@ -32,8 +32,9 @@ purge_packages:
     
 rubies: 
   # - 1.9.3-p545
-  - 2.0.0-p481
-default_ruby: 2.0.0-p481
+  # - 2.0.0-p481
+  - 2.1.2
+default_ruby: 2.1.2
 # default_rails_env: production
 
 s3:
