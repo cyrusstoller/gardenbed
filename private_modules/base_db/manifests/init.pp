@@ -2,7 +2,7 @@
 class base_db(
   $postgresql_roles     = {},
   $postgresql_databases = {},
-  $postgresql_version   = '9.3',
+  $postgresql_version   = '9.4',
   $postgres_password    = undef,
   $perform_backup       = undef,
   $backup_dir           = '/var/db_backups/',
