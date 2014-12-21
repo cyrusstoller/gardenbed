@@ -19,7 +19,7 @@ function add_files_to_tmp_directory {
 	cp -r "$BASE_PATH/deploy" $TMP_DIRECTORY
 
 	cp -r "$BASE_PATH/hiera" $TMP_DIRECTORY
-	rm "${TMP_DIRECTORY}/hiera/*.yaml"* # Copy over common.yml files separately
+	rm "${TMP_DIRECTORY}/hiera/"*".yaml"* # Copy over common.yml files separately
 
 	cp -r "$BASE_PATH/manifests" $TMP_DIRECTORY
 	cp -r "$BASE_PATH/modules" $TMP_DIRECTORY
