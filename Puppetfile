@@ -6,7 +6,7 @@ mod 'attachmentgenie/ssh', '~> 1.5.1'
 mod 'puppetlabs/firewall', '~> 1.6.0'
 mod 'netmanagers/fail2ban', '~> 1.4.0'
 
-mod 'puppetlabs/postgresql', '~> 3.3.0'
+mod 'puppetlabs/postgresql', '~> 4.3.0'
 
 mod 'jfryman/nginx', '~> 0.2.2'
 
