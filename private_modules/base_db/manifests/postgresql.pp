@@ -22,7 +22,6 @@ class base_db::postgresql (
   }
   ->
   class { '::postgresql::server':
-    version           => $postgres_version,
     encoding          => $postgres_encoding,
     locale            => $postgres_locale,
     postgres_password => $postgres_password,
