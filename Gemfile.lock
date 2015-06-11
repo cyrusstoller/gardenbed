@@ -85,3 +85,6 @@ DEPENDENCIES
   puppetlabs_spec_helper
   rake
   rspec-puppet
+
+BUNDLED WITH
+   1.10.3
