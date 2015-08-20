@@ -8,12 +8,12 @@ mod 'netmanagers/fail2ban', '~> 1.4.0'
 
 mod 'puppetlabs/postgresql', '~> 4.3.0'
 
-mod 'jfryman/nginx', '~> 0.2.2'
+mod 'jfryman/nginx', '~> 0.2.7'
 
 mod 'alup/rbenv', '~> 1.2.0'
 mod 'puppetlabs/nodejs', '~> 0.8.0'
 
-mod 'garethr/docker', '~> 4.0.2'
+mod 'garethr/docker', '~> 4.1.1'
 mod 'thomasvandoren/redis', '~> 0.10.0'
 
 # Private Modules
