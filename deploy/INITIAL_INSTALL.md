@@ -10,8 +10,11 @@ $ scripts/upgrade_debian_based_puppet.sh
 in `/etc/puppet/puppet.conf`
 
 ```bash
-$ deploy/puppet_apply_with_args.sh
+$ deploy/puppet_apply_with_args.sh [manifest]
 ```
+
+- `production` is the default manifest and can be omitted. If you prefer `docker`
+then it needs to be supplied.
 
 Open a new terminal window and ssh in
 
