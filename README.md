@@ -51,7 +51,7 @@ and you should be good to go.
 - If you want to add additional packages from `apt` configure `hiera/common.yaml` which was created during the bootstrap process. The `hiera/common.yaml` is used for setting up sensitive information that is unique to each system that is being setup. For more instructions on this read see the [configuration section](#configuration).
 
 ### What's been configured
-- [rbenv](https://github.com/sstephenson/rbenv) with ruby v2.1.2 installed
+- [rbenv](https://github.com/sstephenson/rbenv) with ruby v2.1.5 installed
 - [postgresql](http://www.postgresql.org/) version 9.4+ with role/username `vagrant` with password `foobar` and
 encoding `UTF8` and locale `en_US.UTF-8`.
 - [nodejs](http://nodejs.org/) needed for the asset pipeline
@@ -84,7 +84,7 @@ $> ssh deployer@192.168.33.11
 - a firewall as recommended by https://library.linode.com/securing-your-server#sph_creating-a-firewall
 - an ssh key for the `deployer` user, which is ideal for practicing deployment with a tool like [Capistrano](http://www.capistranorb.com/)
 - after deploying to this machine you will be able to view `http://192.168.33.11` on port 80
-- [rbenv](https://github.com/sstephenson/rbenv) with ruby v2.1.2 installed
+- [rbenv](https://github.com/sstephenson/rbenv) with ruby v2.1.5 installed
 - [postgresql](http://www.postgresql.org/) version 9.4+ with role/username `deployer` with password `foobar` and
 encoding `UTF8` and locale `en_US.UTF-8`. This will also perform a `cron` job for daily backups.
 - [nodejs](http://nodejs.org/) needed for the asset pipeline
