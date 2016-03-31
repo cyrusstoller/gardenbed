@@ -22,7 +22,7 @@ If you've ever heard someone say, "your code doesn't work on my computer," then 
 - Install [Virtual Box](https://www.virtualbox.org/wiki/Downloads)
 - Install [Vagrant](http://www.vagrantup.com/) using the [installer](http://www.vagrantup.com/downloads.html). Previously you
 could install it as a rubygem, but that behavior has since been deprecated. Go to the website. 
-This was built with [version 1.6.5](https://dl.bintray.com/mitchellh/vagrant/Vagrant-1.6.5.dmg).
+This was built with [version 1.8.1](https://dl.bintray.com/mitchellh/vagrant/Vagrant-1.8.1.dmg).
 - Clone this repository with `git clone git@github.com:cyrusstoller/gardenbed.git`
 - `cd` into the cloned repository
 - Double check that you have `bundler` installed
@@ -51,7 +51,7 @@ and you should be good to go.
 - If you want to add additional packages from `apt` configure `hiera/common.yaml` which was created during the bootstrap process. The `hiera/common.yaml` is used for setting up sensitive information that is unique to each system that is being setup. For more instructions on this read see the [configuration section](#configuration).
 
 ### What's been configured
-- [rbenv](https://github.com/sstephenson/rbenv) with ruby v2.1.5 installed
+- [rbenv](https://github.com/sstephenson/rbenv) with ruby v2.1.9 installed
 - [postgresql](http://www.postgresql.org/) version 9.4+ with role/username `vagrant` with password `foobar` and
 encoding `UTF8` and locale `en_US.UTF-8`.
 - [nodejs](http://nodejs.org/) needed for the asset pipeline
@@ -62,7 +62,7 @@ encoding `UTF8` and locale `en_US.UTF-8`.
 - Install [Virtual Box](https://www.virtualbox.org/wiki/Downloads)
 - Install [Vagrant](http://www.vagrantup.com/) using the [installer](http://downloads.vagrantup.com/). Previously you
 could install it as a rubygem, but that behavior has since been deprecated. Go to the website. 
-This was built with [version 1.6.5](https://dl.bintray.com/mitchellh/vagrant/Vagrant-1.6.5.dmg).
+This was built with [version 1.8.1](https://dl.bintray.com/mitchellh/vagrant/Vagrant-1.8.1.dmg).
 - Clone this repository with `git clone git@github.com:cyrusstoller/gardenbed.git`
 - `cd` into the cloned repository
 - `cp hiera/common.yaml.example hiera/common.yaml`
@@ -84,7 +84,7 @@ $> ssh deployer@192.168.33.11
 - a firewall as recommended by https://library.linode.com/securing-your-server#sph_creating-a-firewall
 - an ssh key for the `deployer` user, which is ideal for practicing deployment with a tool like [Capistrano](http://www.capistranorb.com/)
 - after deploying to this machine you will be able to view `http://192.168.33.11` on port 80
-- [rbenv](https://github.com/sstephenson/rbenv) with ruby v2.1.5 installed
+- [rbenv](https://github.com/sstephenson/rbenv) with ruby v2.1.9 installed
 - [postgresql](http://www.postgresql.org/) version 9.4+ with role/username `deployer` with password `foobar` and
 encoding `UTF8` and locale `en_US.UTF-8`. This will also perform a `cron` job for daily backups.
 - [nodejs](http://nodejs.org/) needed for the asset pipeline
@@ -134,4 +134,3 @@ don't have people duplicating work unnecessarily.
 4. Submit a pull request
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/cyrusstoller/gardenbed/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-
