@@ -134,3 +134,5 @@ don't have people duplicating work unnecessarily.
 4. Submit a pull request
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/cyrusstoller/gardenbed/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
+<a data-theme="light" data-width="100%" data-height="567" data-stack-embed="true" href="https://embed.stackshare.io/stacks/embed/7509e9bc98d040"/><script async src="https://cdn1.stackshare.io/javascripts/client-code.js" charset="utf-8"></script>
