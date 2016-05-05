@@ -13,7 +13,7 @@ mod 'jfryman/nginx', '~> 0.2.7'
 mod 'alup/rbenv', '~> 1.2.0'
 mod 'puppetlabs/nodejs', '~> 0.8.0'
 
-mod 'garethr/docker', '~> 4.1.1'
+mod 'garethr/docker', '~> 5.2.0'
 mod 'thomasvandoren/redis', '~> 0.10.0'
 
 # Private Modules
