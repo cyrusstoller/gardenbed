@@ -133,5 +133,4 @@ don't have people duplicating work unnecessarily.
 3. Make your changes and commit them to your feature branch
 4. Submit a pull request
 
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/cyrusstoller/gardenbed/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 [![Stack Share](http://img.shields.io/badge/tech-stack-0690fa.svg?style=flat)](http://stackshare.io/cyrusstoller/gardenbed)
