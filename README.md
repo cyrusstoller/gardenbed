@@ -23,6 +23,11 @@ If you've ever heard someone say, "your code doesn't work on my computer," then 
 - Install [Vagrant](http://www.vagrantup.com/) using the [installer](http://www.vagrantup.com/downloads.html). Previously you
 could install it as a rubygem, but that behavior has since been deprecated. Go to the website. 
 This was built with [version 1.8.5](https://dl.bintray.com/mitchellh/vagrant/Vagrant-1.8.5.dmg).
+
+```bash
+$> brew cask install virtualbox vagrant
+```
+
 - Clone this repository with `git clone git@github.com:cyrusstoller/gardenbed.git`
 - `cd` into the cloned repository
 - Double check that you have `bundler` installed
