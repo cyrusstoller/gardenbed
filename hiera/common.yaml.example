@@ -27,7 +27,7 @@ postgresql_databases:
     owner: "vagrant"
 postgres_password: password12345
 
-purge_packages:
+# purge_packages:
   # -imagemagick
     
 rubies: 
