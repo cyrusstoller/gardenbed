@@ -9,19 +9,22 @@ class base_app (
 ){
   include nodejs
 
-  rbenv::install { $deployer:
-    group => $deployers_group,
+  class { 'rbenv': 
+    latest => true,  
   }
-
-  rbenv::compile { $rubies:
-    user => $deployer,
+  rbenv::plugin { [ 'sstephenson/ruby-build' ]: 
+    latest => true,
+  }
+  rbenv::build { $rubies:
+    global => true,
+    group  => $deployers_group,
   }
   ->
-  file { "/home/${deployer}/.rbenv/version":
+  file { "/usr/local/rbenv/version":
     ensure  => file,
     content => $default_ruby,
     owner   => $deployer,
-    group   => $deployer,
+    group   => $deployers_group,
   }
 
   file { '/var/www':

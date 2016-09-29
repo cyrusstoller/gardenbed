@@ -10,7 +10,7 @@ mod 'puppetlabs/postgresql', '~> 4.8.0'
 
 mod 'puppet/nginx', '~> 0.4.0'
 
-mod 'alup/rbenv', '~> 1.2.0'
+mod 'jdowning/rbenv', '~> 2.1.0'
 mod 'puppet/nodejs', '~> 2.0.1'
 
 mod 'garethr/docker', '~> 5.3.0'
