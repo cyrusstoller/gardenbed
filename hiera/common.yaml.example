@@ -31,9 +31,8 @@ purge_packages:
   # -imagemagick
     
 rubies: 
-  - 2.1.9
-  # - 2.3.0
-default_ruby: 2.1.9
+  - 2.3.0
+default_ruby: 2.3.0
 # default_rails_env: production
 
 s3:

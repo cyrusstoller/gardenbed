@@ -1,6 +1,7 @@
 .DS_STORE
 *~
 *.swp
+*.log
 .vagrant
 .tmp/
 .librarian/

@@ -2,9 +2,9 @@ source 'https://rubygems.org'
  
 group :rake do
   gem 'rake'
-  gem "puppet", "~> 4.4.2"
+  gem "puppet", "~> 4.7.0"
   gem "librarian-puppet", "~> 2.2.3"
-  gem "puppet-lint", "~> 1.1.0"
+  gem "puppet-lint", "~> 2.0.2"
 
   # for writing tests
   gem 'rspec-puppet'

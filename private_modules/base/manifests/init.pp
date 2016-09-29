@@ -41,6 +41,5 @@ class base (
     # purge_sources_list   => false,
     # purge_sources_list_d => false,
     # purge_preferences_d  => false,
-    update_timeout       => undef
   }
 }
