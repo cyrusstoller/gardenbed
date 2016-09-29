@@ -8,7 +8,7 @@ mod 'netmanagers/fail2ban', '~> 1.4.0'
 
 mod 'puppetlabs/postgresql', '~> 4.8.0'
 
-mod 'jfryman/nginx', '~> 0.2.7'
+mod 'puppet/nginx', '~> 0.4.0'
 
 mod 'alup/rbenv', '~> 1.2.0'
 mod 'puppetlabs/nodejs', '~> 0.8.0'
