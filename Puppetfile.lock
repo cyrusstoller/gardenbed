@@ -21,6 +21,9 @@ FORGE
       puppetlabs-apt (< 3.0.0, >= 1.8.0)
       puppetlabs-concat (< 3.0.0, >= 1.1.1)
       puppetlabs-stdlib (< 5.0.0, >= 4.2.0)
+    puppet-nodejs (2.0.1)
+      puppetlabs-stdlib (< 5.0.0, >= 4.1.0)
+      treydock-gpg_key (< 1.0.0, >= 0.0.3)
     puppetlabs-apt (2.3.0)
       puppetlabs-stdlib (< 5.0.0, >= 4.5.0)
     puppetlabs-concat (2.2.0)
@@ -28,8 +31,6 @@ FORGE
     puppetlabs-firewall (1.8.1)
     puppetlabs-gcc (0.3.0)
       puppetlabs-stdlib (< 5.0.0, >= 2.0.0)
-    puppetlabs-nodejs (0.8.0)
-      puppetlabs-stdlib (< 5.0.0, >= 2.2.1)
     puppetlabs-postgresql (4.8.0)
       puppetlabs-apt (< 3.0.0, >= 1.8.0)
       puppetlabs-concat (< 3.0.0, >= 1.1.0)
@@ -40,6 +41,7 @@ FORGE
     thomasvandoren-redis (0.10.0)
       maestrodev-wget (>= 1.1.0)
       puppetlabs-gcc (>= 0.0.3)
+    treydock-gpg_key (0.0.3)
 
 PATH
   remote: ./private_modules/base
@@ -77,8 +79,8 @@ DEPENDENCIES
   garethr-docker (~> 5.3.0)
   netmanagers-fail2ban (~> 1.4.0)
   puppet-nginx (~> 0.4.0)
+  puppet-nodejs (~> 2.0.1)
   puppetlabs-firewall (~> 1.8.1)
-  puppetlabs-nodejs (~> 0.8.0)
   puppetlabs-postgresql (~> 4.8.0)
   thomasvandoren-redis (~> 0.10.0)
 
