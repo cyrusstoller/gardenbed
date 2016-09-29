@@ -1,8 +1,6 @@
 FORGE
   remote: https://forgeapi.puppetlabs.com
   specs:
-    attachmentgenie-ssh (1.6.0)
-      puppetlabs-stdlib (< 5.0.0, >= 2.2.1)
     example42-monitor (2.0.4)
       example42-puppi (>= 2.0.0)
     example42-puppi (2.2.1)
@@ -10,6 +8,12 @@ FORGE
       puppetlabs-apt (<= 3.0.0, >= 1.8.0)
       puppetlabs-stdlib (>= 4.1.0)
       stahnma-epel (>= 0.0.6)
+    ghoneycutt-common (1.6.0)
+      puppetlabs-stdlib (< 6.0.0, >= 4.6.0)
+    ghoneycutt-ssh (3.45.0)
+      ghoneycutt-common (< 2.0.0, >= 1.4.1)
+      puppetlabs-firewall (< 2.0.0, >= 0.2.1)
+      puppetlabs-stdlib (< 6.0.0, >= 4.6.0)
     jdowning-rbenv (2.1.0)
       puppetlabs-stdlib (< 5.0.0, >= 4.1.0)
     maestrodev-wget (1.7.3)
@@ -70,13 +74,13 @@ PATH
     gardenbed-s3cmd (0.0.1)
 
 DEPENDENCIES
-  attachmentgenie-ssh (~> 1.6.0)
   gardenbed-base (>= 0)
   gardenbed-base_app (>= 0)
   gardenbed-base_db (>= 0)
   gardenbed-base_web (>= 0)
   gardenbed-s3cmd (>= 0)
   garethr-docker (~> 5.3.0)
+  ghoneycutt-ssh (~> 3.45.0)
   jdowning-rbenv (~> 2.1.0)
   netmanagers-fail2ban (~> 1.4.0)
   puppet-nginx (~> 0.4.0)

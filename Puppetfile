@@ -2,7 +2,7 @@ forge "https://forgeapi.puppetlabs.com"
 
 # Public Modules
 
-mod 'attachmentgenie/ssh', '~> 1.6.0'
+mod 'ghoneycutt/ssh', '~> 3.45.0'
 mod 'puppetlabs/firewall', '~> 1.8.1'
 mod 'netmanagers/fail2ban', '~> 1.4.0'
 
