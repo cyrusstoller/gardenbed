@@ -1,5 +1,5 @@
 class { 'docker':
-  version => '1.11.1',
+  version => '1.12.1',
   before  => Class['base::deployer']
 }
 
