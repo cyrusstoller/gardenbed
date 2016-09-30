@@ -7,7 +7,7 @@ but you may want to run `deploy/puppet_apply_with_args docker` to install the pr
 
 ---
 
-For servers that already have a `~/common.yml` you can use `deploy/update.sh $HOST [$DESTINATION] [$MANIFEST]`
+For servers that already have a `~/common.yml` you can use `deploy/update.sh $HOST [$MANIFEST] [$DESTINATION]`
 to rsync the manifests to the server and the run puppet.
 
 For example:
@@ -18,6 +18,6 @@ $ deploy/update.sh deployer@revtilt.com
 
 In this example the following is implied:
 
-- `/tmp/puppet` is the `DESTINATION`
 - `production` is the `MANIFEST` which is passed to `puppet_apply_with_args.sh`.
 The `MANIFEST` file has to be in the `manifests` directory. This parameter is passed without the `.pp` suffix.
+- `/tmp/puppet` is the `DESTINATION`

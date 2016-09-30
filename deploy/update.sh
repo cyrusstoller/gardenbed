@@ -1,15 +1,15 @@
 #!/bin/bash
 
 HOST=$1
-DESTINATION=$2
-MANIFEST=$3
+MANIFEST=$2
+DESTINATION=$3
 DIR=$( dirname "${BASH_SOURCE}" )
 
 function invalid_usage {
 	echo
 	echo "Invalid usage of update.sh"
 	echo "You need to provide a destination"
-	echo "usage: $0 HOST [DESTINATION] [MANIFEST]"
+	echo "usage: $0 HOST [MANIFEST] [DESTINATION]"
 	echo
 	exit 1
 }
@@ -23,7 +23,7 @@ function call_rsync_and_place_common {
 	echo "provisioning finished"
 }
 
-if [ -z "$2" ]
+if [ -z "$3" ]
 then
 	DESTINATION="/tmp/puppet"
 fi
