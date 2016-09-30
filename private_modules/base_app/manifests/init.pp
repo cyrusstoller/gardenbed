@@ -9,10 +9,10 @@ class base_app (
 ){
   include nodejs
 
-  class { 'rbenv': 
-    latest => true,  
+  class { 'rbenv':
+    latest => true,
   }
-  rbenv::plugin { [ 'sstephenson/ruby-build' ]: 
+  rbenv::plugin { [ 'sstephenson/ruby-build' ]:
     latest => true,
   }
   rbenv::build { $rubies:
@@ -20,7 +20,7 @@ class base_app (
     group  => $deployers_group,
   }
   ->
-  file { "/usr/local/rbenv/version":
+  file { '/usr/local/rbenv/version':
     ensure  => file,
     content => $default_ruby,
     owner   => $deployer,
