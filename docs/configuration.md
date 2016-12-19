@@ -31,9 +31,6 @@ $> echo -n "md5"; echo "<<PASSWORD>><<USERNAME>>" | md5
 - `purge_packages`
   - List any packages that you want purged from the sytem
 
-- `redis_version`
-  - Specify the [redis](http://redis.io/) version number. This defaults to 2.8.13.
-  
 - `rubies`
   - Here you list all of the rubies that you want to be installed using [rbenv](https://github.com/sstephenson/rbenv)
   - Be sure to specify the patch number
@@ -56,12 +53,12 @@ $> echo -n "md5"; echo "<<PASSWORD>><<USERNAME>>" | md5
   - By default, Vagrant will add another user named `vagrant` with password `vagrant`.
   - In the `common.yaml` there is also a user called `deployer`.
   - To find more options that can be passed, read [this](http://docs.puppetlabs.com/references/latest/type.html#user)
-   
+
 - `ssh_keys`
   - Here you list all of the ssh public keys that you want installed on your system
   - Each key here needs to be unique, but `deployer_key` has no other significance.
   - The user should have been specified in the `users` section
-  - You can find your public key by copying and pasting you the output of `$> cat ~/.ssh/id_rsa.pub` or you can 
+  - You can find your public key by copying and pasting you the output of `$> cat ~/.ssh/id_rsa.pub` or you can
   use the public ssh key you have on github by going to the following url: `https://github.com/<<GITHUB_USERNAME>>.keys`.
   - Be sure to chop off the leading `ssh-rsa ` before adding your key(s) to `hiera/common.yaml`
   - To find more options that can be passed, read [this](http://docs.puppetlabs.com/references/latest/type.html#sshauthorizedkey)

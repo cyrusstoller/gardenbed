@@ -13,10 +13,7 @@ class { 'base_db':
   require              => Class['base']
 }
 
-# class { 'redis':
-#   version          => hiera('redis_version', '2.8.13'),
-#   redis_max_memory => '256mb'
-# }
+class { 'redis': }
 
 class { 'base_app':
   rubies              => hiera('rubies', '2.1.5'),

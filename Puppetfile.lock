@@ -1,6 +1,10 @@
 FORGE
   remote: https://forgeapi.puppetlabs.com
   specs:
+    arioch-redis (1.2.4)
+      puppetlabs-apt (< 3.0.0, >= 2.3.0)
+      puppetlabs-stdlib (< 5.0.0, >= 1.0.2)
+      stahnma-epel (< 2.0.0, >= 1.0.2)
     example42-monitor (2.0.4)
       example42-puppi (>= 2.0.0)
     example42-puppi (2.2.1)
@@ -16,7 +20,6 @@ FORGE
       puppetlabs-stdlib (< 6.0.0, >= 4.6.0)
     jdowning-rbenv (2.1.0)
       puppetlabs-stdlib (< 5.0.0, >= 4.1.0)
-    maestrodev-wget (1.7.3)
     netmanagers-fail2ban (1.4.0)
       example42-monitor (>= 2.0.0)
       example42-puppi (>= 2.0.0)
@@ -33,8 +36,6 @@ FORGE
     puppetlabs-concat (2.2.0)
       puppetlabs-stdlib (< 5.0.0, >= 4.2.0)
     puppetlabs-firewall (1.8.1)
-    puppetlabs-gcc (0.3.0)
-      puppetlabs-stdlib (< 5.0.0, >= 2.0.0)
     puppetlabs-postgresql (4.8.0)
       puppetlabs-apt (< 3.0.0, >= 1.8.0)
       puppetlabs-concat (< 3.0.0, >= 1.1.0)
@@ -42,9 +43,6 @@ FORGE
     puppetlabs-stdlib (4.14.0)
     stahnma-epel (1.2.2)
       puppetlabs-stdlib (>= 3.0.0)
-    thomasvandoren-redis (0.10.0)
-      maestrodev-wget (>= 1.1.0)
-      puppetlabs-gcc (>= 0.0.3)
 
 PATH
   remote: ./private_modules/base
@@ -72,6 +70,7 @@ PATH
     gardenbed-s3cmd (0.0.1)
 
 DEPENDENCIES
+  arioch-redis (~> 1.2.4)
   gardenbed-base (>= 0)
   gardenbed-base_app (>= 0)
   gardenbed-base_db (>= 0)
@@ -85,5 +84,4 @@ DEPENDENCIES
   puppet-nodejs (~> 2.2.0)
   puppetlabs-firewall (~> 1.8.1)
   puppetlabs-postgresql (~> 4.8.0)
-  thomasvandoren-redis (~> 0.10.0)
 
