@@ -21,7 +21,7 @@ If you've ever heard someone say, "your code doesn't work on my computer," then 
 
 - Install [Virtual Box](https://www.virtualbox.org/wiki/Downloads)
 - Install [Vagrant](http://www.vagrantup.com/) using the [installer](http://www.vagrantup.com/downloads.html). Previously you
-could install it as a rubygem, but that behavior has since been deprecated. Go to the website. 
+could install it as a rubygem, but that behavior has since been deprecated. Go to the website.
 This was built with [version 1.8.5](https://dl.bintray.com/mitchellh/vagrant/Vagrant-1.8.5.dmg).
 
 ```bash
@@ -50,14 +50,14 @@ your favorite text editor and maintain a similar workflow without having to worr
 $> vagrant ssh
 ```
 
-- Then go to your project directory in `/vagrant` and `bundle install` and `bundle exec rails s` or `bundle exec foreman start` 
+- Then go to your project directory in `/vagrant` and `bundle install` and `bundle exec rails s` or `bundle exec foreman start`
 and you should be good to go.
 - Your website should be viewable at `http://localhost:3000` or `http://localhost:5000` depending on how your application is configured.
 - If you want to add additional packages from `apt` configure `hiera/common.yaml` which was created during the bootstrap process. The `hiera/common.yaml` is used for setting up sensitive information that is unique to each system that is being setup. For more instructions on this read see the [configuration section](#configuration).
 
 ### What's been configured
 - [rbenv](https://github.com/sstephenson/rbenv) with ruby v2.3.0 installed
-- [postgresql](http://www.postgresql.org/) version 9.5+ with role/username `vagrant` with password `foobar` and
+- [postgresql](http://www.postgresql.org/) version 9.6+ with role/username `vagrant` with password `foobar` and
 encoding `UTF8` and locale `en_US.UTF-8`.
 - [nodejs](http://nodejs.org/) needed for the asset pipeline
 - [redis](http://redis.io/)
@@ -66,7 +66,7 @@ encoding `UTF8` and locale `en_US.UTF-8`.
 
 - Install [Virtual Box](https://www.virtualbox.org/wiki/Downloads)
 - Install [Vagrant](http://www.vagrantup.com/) using the [installer](http://downloads.vagrantup.com/). Previously you
-could install it as a rubygem, but that behavior has since been deprecated. Go to the website. 
+could install it as a rubygem, but that behavior has since been deprecated. Go to the website.
 This was built with [version 1.8.5](https://dl.bintray.com/mitchellh/vagrant/Vagrant-1.8.5.dmg).
 - Clone this repository with `git clone git@github.com:cyrusstoller/gardenbed.git`
 - `cd` into the cloned repository
@@ -90,14 +90,14 @@ $> ssh deployer@192.168.33.11
 - an ssh key for the `deployer` user, which is ideal for practicing deployment with a tool like [Capistrano](http://www.capistranorb.com/)
 - after deploying to this machine you will be able to view `http://192.168.33.11` on port 80
 - [rbenv](https://github.com/sstephenson/rbenv) with ruby v2.3.0 installed
-- [postgresql](http://www.postgresql.org/) version 9.5+ with role/username `deployer` with password `foobar` and
+- [postgresql](http://www.postgresql.org/) version 9.6+ with role/username `deployer` with password `foobar` and
 encoding `UTF8` and locale `en_US.UTF-8`. This will also perform a `cron` job for daily backups.
 - [nodejs](http://nodejs.org/) needed for the asset pipeline
 - [nginx](http://nginx.com/) for serving static assets
 - [fail2ban](https://en.wikipedia.org/wiki/Fail2ban)
 - [redis](http://redis.io/)
 
-The `hiera/common.yaml` makes it really easy to provision more system users, create more roles and databases for postgresql, 
+The `hiera/common.yaml` makes it really easy to provision more system users, create more roles and databases for postgresql,
 and install more rubies. See [below](#configuration) for more details.
 
 ## Vagrant

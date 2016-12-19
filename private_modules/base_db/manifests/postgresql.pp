@@ -2,7 +2,7 @@
 class base_db::postgresql (
   $postgres_roles     = {},
   $postgres_databases = {},
-  $postgres_version   = '9.4',
+  $postgres_version   = '9.6',
   $postgres_encoding  = 'UTF8',
   $postgres_locale    = 'en_US.UTF-8',
   $postgres_password  = undef,
