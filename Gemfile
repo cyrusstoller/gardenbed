@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
- 
+
 group :rake do
   gem 'rake'
-  gem "puppet", "~> 4.7.0"
+  gem "puppet", "~> 4.8.1"
   gem "librarian-puppet", "~> 2.2.3"
   gem "puppet-lint", "~> 2.0.2"
 
