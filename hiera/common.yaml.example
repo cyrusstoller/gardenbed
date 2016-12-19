@@ -29,10 +29,10 @@ postgres_password: password12345
 
 # purge_packages:
   # -imagemagick
-    
-rubies: 
-  - 2.3.0
-default_ruby: 2.3.0
+
+rubies:
+  - 2.3.1
+default_ruby: 2.3.1
 # default_rails_env: production
 
 s3:

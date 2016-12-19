@@ -16,11 +16,11 @@ class { 'base_db':
 class { 'redis': }
 
 class { 'base_app':
-  rubies              => hiera('rubies', '2.1.5'),
+  rubies              => hiera('rubies', '2.3.1'),
   deployer            => 'vagrant',
   deployers_group     => 'vagrant',
   require             => Class['base'],
-  default_ruby        => hiera('default_ruby', '2.1.5'),
+  default_ruby        => hiera('default_ruby', '2.3.1'),
   additional_packages => hiera('additional_packages', []),
   purge_packages      => hiera('purge_packages', []),
 }
