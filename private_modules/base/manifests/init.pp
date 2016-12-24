@@ -42,4 +42,6 @@ class base (
     # purge_sources_list_d => false,
     # purge_preferences_d  => false,
   }
+
+  include ::monit
 }

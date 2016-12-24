@@ -5,6 +5,7 @@ forge "https://forgeapi.puppetlabs.com"
 mod 'ghoneycutt/ssh', '~> 3.49.0'
 mod 'puppetlabs/firewall', '~> 1.8.1'
 mod 'netmanagers/fail2ban', '~> 1.4.0'
+mod 'echoes-monit', '1.1.2'
 
 mod 'puppetlabs/postgresql', '~> 4.8.0'
 

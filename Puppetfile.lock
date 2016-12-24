@@ -5,6 +5,9 @@ FORGE
       puppetlabs-apt (< 3.0.0, >= 2.3.0)
       puppetlabs-stdlib (< 5.0.0, >= 1.0.2)
       stahnma-epel (< 2.0.0, >= 1.0.2)
+    echoes-monit (1.1.2)
+      puppetlabs-firewall (< 2.0.0, >= 1.7.1)
+      puppetlabs-stdlib (< 6.0.0, >= 4.6.0)
     example42-monitor (2.0.4)
       example42-puppi (>= 2.0.0)
     example42-puppi (2.2.1)
@@ -71,6 +74,7 @@ PATH
 
 DEPENDENCIES
   arioch-redis (~> 1.2.4)
+  echoes-monit (= 1.1.2)
   gardenbed-base (>= 0)
   gardenbed-base_app (>= 0)
   gardenbed-base_db (>= 0)
