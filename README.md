@@ -1,7 +1,7 @@
-# Basic Puppet Template for a basic Ruby + PostgreSQL + Nginx (+ Redis) stack
+# Basic Puppet Template for a basic Ruby + PostgreSQL + Nginx + Redis stack
 
 These puppet manifests are intended to be a starting point for using [Ruby](https://www.ruby-lang.org/),
-with [PostgreSQL](http://www.postgresql.org/), [Nginx](http://nginx.com/), and optionally [Redis](http://redis.io/).
+with [PostgreSQL](http://www.postgresql.org/), [Nginx](http://nginx.com/), and [Redis](http://redis.io/).
 
 Some of my projects no longer seem to fit neatly into the Heroku's offerings, so I decided to
 migrate them to VPS services like [Linode](https://www.linode.com/), [Digital Ocean](https://digitalocean.com/)
