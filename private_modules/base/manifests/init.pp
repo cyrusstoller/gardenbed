@@ -43,5 +43,8 @@ class base (
     # purge_preferences_d  => false,
   }
 
-  include ::monit
+  class { 'monit':
+    httpd         => true,
+    httpd_address => 'localhost'
+  }
 }
