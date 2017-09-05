@@ -13,6 +13,7 @@ mod 'puppet/nginx', '~> 0.5.0'
 
 mod 'jdowning/rbenv', '~> 2.1.0'
 mod 'puppet/nodejs', '~> 2.2.0'
+mod 'artberri-yarn', '1.0.0'
 
 mod 'garethr/docker', '~> 5.3.0'
 mod 'arioch-redis', '~> 1.2.4'

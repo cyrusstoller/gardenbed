@@ -8,6 +8,7 @@ class base_app (
   $purge_packages      = [],
 ){
   include nodejs
+  include yarn
 
   class { 'rbenv':
     latest => true,
