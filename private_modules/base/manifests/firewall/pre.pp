@@ -9,17 +9,17 @@ class base::firewall::pre {
   firewall { '000 accept all icmp':
     proto  => 'icmp',
     action => 'accept',
-  }->
-  firewall { '001 accept all to lo interface':
+  }
+  -> firewall { '001 accept all to lo interface':
     proto   => 'all',
     iniface => 'lo',
     action  => 'accept',
-  }->
-  firewall { '001 drop all traffic to 127/8':
+  }
+  -> firewall { '001 drop all traffic to 127/8':
     destination => '127.0.0.0/8',
     action      => 'reject',
-  }->
-  firewall { '002 accept related established rules':
+  }
+  -> firewall { '002 accept related established rules':
     proto  => 'all',
     state  => ['RELATED', 'ESTABLISHED'],
     action => 'accept',

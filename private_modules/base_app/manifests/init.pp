@@ -19,8 +19,7 @@ class base_app (
     global => true,
     group  => $deployers_group,
   }
-  ->
-  file { '/usr/local/rbenv/version':
+  -> file { '/usr/local/rbenv/version':
     ensure  => file,
     content => $default_ruby,
     owner   => $deployer,
